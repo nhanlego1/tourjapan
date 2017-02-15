@@ -23,7 +23,7 @@
 define('DB_NAME', 'tourjp');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'nhan');
 
 /** MySQL database password */
 define('DB_PASSWORD', '@abcd1234');
