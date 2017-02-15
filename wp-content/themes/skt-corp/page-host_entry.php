@@ -229,6 +229,21 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
         foreach ($_POST['c9lr'] as $key=>$value) {
             if($value!='') $c9lr.=$value;
         }
+        require_once( ABSPATH . 'wp-admin/includes/image.php' );
+        require_once( ABSPATH . 'wp-admin/includes/file.php' );
+        require_once( ABSPATH . 'wp-admin/includes/media.php' );
+
+         $attachment_id = media_handle_upload( 'f6et', 0 );
+         $attachment_id_1 = media_handle_upload( 'f6rs', 0 );
+         $attachment_id_2 = media_handle_upload( 'f6hl', 0 );
+         $attachment_id_3 = media_handle_upload( 'f5ue', 0 );
+         $attachment_id_4 = media_handle_upload( 'f5vi', 0 );
+         $attachment_id_5 = media_handle_upload( 'f9gp', 0 );
+
+        if ( is_wp_error( $attachment_id ) || is_wp_error( $attachment_id_1 ) || is_wp_error( $attachment_id_2 ) ||is_wp_error( $attachment_id_3) || is_wp_error( $attachment_id_4 ) || is_wp_error( $attachment_id_5)) {
+          echo 'Error';
+
+        }
        ?>
 
     <form action="<?php echo esc_url(home_url('/'));?>host_entry/" method="post">
@@ -272,15 +287,18 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
             <input type="hidden" name="s9oi" value="<?php echo $_POST['s9oi']; ?>">
             <input type="hidden" name="c9lr[]" value="<?php echo $_POST['c9lr'][0]; ?>">
             
-         <input type="hidden" name="file_zone1" value="<?php echo $_FILES['f6et']['name']; ?>">
-          <input type="hidden" name="file_zone2" value="<?php echo $_FILES['f6rs']['name']; ?>">
-           <input type="hidden" name="file_zone3" value="<?php echo $_FILES['f6hl']['name']; ?>">
+
+                    <input type="hidden" name="file_zone1" value="<?php echo $attachment_id ?>">
+          <input type="hidden" name="file_zone2" value="<?php echo $attachment_id_1 ?>">
+           <input type="hidden" name="file_zone3" value="<?php echo $attachment_id_2 ?>">
+
+
            <input type="hidden" name="file_note1" value="<?php echo $_POST['t8kg']; ?>">
            <input type="hidden" name="file_note2" value="<?php echo $_POST['t5ue']; ?>">
            <input type="hidden" name="file_note3" value="<?php echo$_POST['t5wp']; ?>">
-          <input type="hidden" name="file_eat1" value="<?php echo $_FILES['f5ue']['name']; ?>">
-          <input type="hidden" name="file_eat2" value="<?php echo $_FILES['f5vi']['name']; ?>">
-           <input type="hidden" name="file_eat3" value="<?php echo $_FILES['f9gp']['name']; ?>">
+          <input type="hidden" name="file_eat1" value="<?php echo $attachment_id_3 ?>">
+          <input type="hidden" name="file_eat2" value="<?php echo $attachment_id_4 ?>">
+           <input type="hidden" name="file_eat3" value="<?php echo $attachment_id_5 ?>">
            <input type="hidden" name="file_eat_note1" value="<?php echo $_POST['t4gt']; ?>">
            <input type="hidden" name="file_eat_note2" value="<?php echo  $_POST['t0zf']; ?>">
            <input type="hidden" name="file_eat_note3" value="<?php echo $_POST['t8ia']; ?>">
@@ -389,21 +407,22 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                  <tr>
                     <th>お勧めスポット①</th>
                     <td>
-                        <?php echo $_FILES['f6et']['name']; ?>
+                             <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>'; ?>
                         <?php echo $_POST['t8kg']; ?>
-                         <?php echo $_FILES['f6rs']['name']; ?>
+                         <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?>
                          <?php echo $_POST['t5ue']; ?>
-                           <?php echo $_FILES['f6hl']['name']; ?>
-                             <?php echo$_POST['t5wp']; ?> </td>
+                           <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?>
+                             <?php echo$_POST['t5wp']; ?>  </td>
                 </tr>
                  <tr>
                     <th>お勧めグルメ</th>
                     <td>
-                       <?php echo $_FILES['f5ue']['name']; ?>
+                        <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?>
                        <?php echo $_POST['t4gt']; ?>
-                      <?php echo $_FILES['f5vi']['name']; ?>
+                      <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?>
                       <?php echo  $_POST['t0zf']; ?> 
-                    <?php echo $_FILES['f9gp']['name']; ?>
+                    <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_5
+                    ,'thumbnail')[0].'"/>'; ?>
                       <?php echo $_POST['t8ia']; ?> </td>
                 </tr>
                

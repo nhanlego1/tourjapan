@@ -202,6 +202,16 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
         foreach ($_POST['c5kv'] as $key=>$value) {
             if($value!='') $c5kv.=$value." ";
         }
+
+        require_once( ABSPATH . 'wp-admin/includes/image.php' );
+        require_once( ABSPATH . 'wp-admin/includes/file.php' );
+        require_once( ABSPATH . 'wp-admin/includes/media.php' );
+
+          if ($_FILES['f9og']['name']!='') $attachment_id = media_handle_upload( 'f9og', 0 );else $attachment_id = null;
+          if ($_FILES['f9oe']['name']!='')$attachment_id_1 = media_handle_upload( 'f9oe', 0 );else $attachment_id_1 = null;
+          if ($_FILES['f5iq']['name']!='')$attachment_id_2 = media_handle_upload( 'f5iq', 0 );else $attachment_id_2 = null;
+          if ($_FILES['f6ta']['name']!='')$attachment_id_3 = media_handle_upload( 'f6ta', 0 );else $attachment_id_3 = null;
+          if ($_FILES['f7cv']['name']!='')$attachment_id_4 = media_handle_upload( 'f7cv', 0 );else $attachment_id_4 = null;
        ?>
         <form action="<?php echo esc_url(home_url('/'));?>tour_entry/" method="post">
         <fieldset>
@@ -242,11 +252,11 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
             <input type="hidden" name="t4cf" value="<?php echo $_POST['t4cf']; ?>">
           
           
-         <input type="hidden" name="file_f9og" value="<?php echo $_FILES['f9og']['name']; ?>">
-          <input type="hidden" name="file_f9oe" value="<?php echo $_FILES['f9oe']['name']; ?>">
-           <input type="hidden" name="file_f5iq" value="<?php echo $_FILES['f5iq']['name']; ?>">
-           <input type="hidden" name="file_f6ta" value="<?php echo $_FILES['f6ta']['name']; ?>">
-           <input type="hidden" name="file_f7cv" value="<?php echo $_FILES['f7cv']['name']; ?>">
+         <input type="hidden" name="file_f9og" value="<?php echo  $attachment_id; ?>">
+          <input type="hidden" name="file_f9oe" value="<?php echo $attachment_id_1; ?>">
+           <input type="hidden" name="file_f5iq" value="<?php echo $attachment_id_2; ?>">
+           <input type="hidden" name="file_f6ta" value="<?php echo $attachment_id_3; ?>">
+           <input type="hidden" name="file_f7cv" value="<?php echo $attachment_id_4; ?>">
           
            
            
@@ -369,11 +379,11 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
                 <tr>
                     <th>イメージ写真</th>
                     <td>
-                        <?php echo $_FILES['f9og']['name']; ?><br>
-                        <?php echo $_FILES['f9oe']['name']; ?><br>
-                        <?php echo $_FILES['f5iq']['name']; ?><br>
-                        <?php echo $_FILES['f6ta']['name']; ?><br>
-                        <?php echo $_FILES['f7cv']['name']; ?></td>
+                        <?php if($attachment_id!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>';  ?><br>
+                        <?php if($attachment_id_1!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>';  ?><br>
+                        <?php if($attachment_id_2!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>';  ?><br>
+                        <?php if($attachment_id_3!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>';  ?><br>
+                        <?php if($attachment_id_4!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>';  ?></td>
                 </tr>
             </tbody></table>
             <p class="submit_bt_wrap">

@@ -67,18 +67,17 @@ function wps_theme_func(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name guest</th><th>Email guest</th><th>Phone guest</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Name host</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff"><th>Name host</th><th>Email host</th><th>Phone host</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
 				foreach( $wpdb->get_results("SELECT * FROM  host_reg") as $key => $row) {
 					 echo '
-					 <tr><td>'.$row->name_guest.'</td><td>'
-					 .$row->email_guest.'</td><td>'
-					 .$row->phone_guest.'</td><td>'
-					 .$row->code1_guest.'</td><td>'
-					 .$row->code2_guest.'</td><td>'
-					 .$row->quan_guest.'</td><td>'
-					 .$row->tinh_guest.'</td><td>'
+					 <tr><td>'.$row->name_host.'</td><td>'
+					 .$row->email_host.'</td><td>'
+					 .$row->phone_host.'</td><td>'
+					 .$row->code1_host.'</td><td>'
+					 .$row->code2_host.'</td><td>'
+					 .$row->quan_host.'</td><td>'
+					 .$row->tinh_host.'</td><td>'
 					 .$row->add_guest.'</td><td>'
-					 .$row->name_host.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=theme-options&order_host_id='.$row->id.'">Xóa</a></td><tr>';
@@ -105,18 +104,17 @@ function wps_theme_func_settings(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name guest</th><th>Email guest</th><th>Phone guest</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Name tour</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff"><th>Name tour</th><th>Email tour</th><th>Phone tour</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
 				foreach( $wpdb->get_results("SELECT * FROM  tour_reg") as $key => $row) {
 					 echo '
-					 <tr><td>'.$row->name_guest.'</td><td>'
-					 .$row->email_guest.'</td><td>'
-					 .$row->phone_guest.'</td><td>'
-					 .$row->code1_guest.'</td><td>'
-					 .$row->code2_guest.'</td><td>'
+					 <tr><td>'.$row->name_tour.'</td><td>'
+					 .$row->mail_address.'</td><td>'
+					 .$row->phone_number.'</td><td>'
+					 .$row->zone1.'</td><td>'
+					 .$row->zone2.'</td><td>'
 					 .$row->quan_guest.'</td><td>'
 					 .$row->tinh_guest.'</td><td>'
 					 .$row->add_guest.'</td><td>'
-					 .$row->name_tour.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=tour-orders&order_tour_id='.$row->id.'">Xóa</a></td><tr>';
@@ -143,18 +141,17 @@ function wps_theme_func_faq(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name guest</th><th>Email guest</th><th>Phone guest</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Name house</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff"><th>Name house</th><th>Email house</th><th>Phone house</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
 				foreach( $wpdb->get_results("SELECT * FROM  house_reg") as $key => $row) {
 					 echo '
-					 <tr><td>'.$row->name_guest.'</td><td>'
-					 .$row->email_guest.'</td><td>'
-					 .$row->phone_guest.'</td><td>'
-					 .$row->code1_guest.'</td><td>'
-					 .$row->code2_guest.'</td><td>'
+					 <tr><td>'.$row->name_house.'</td><td>'
+					 .$row->mail_address.'</td><td>'
+					 .$row->phone_number.'</td><td>'
+					 .$row->zone1.'</td><td>'
+					 .$row->zone1.'</td><td>'
 					 .$row->quan_guest.'</td><td>'
 					 .$row->tinh_guest.'</td><td>'
 					 .$row->add_guest.'</td><td>'
-					 .$row->name_house.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=house-orders&order_house_id='.$row->id.'">Xóa</a></td><tr>';

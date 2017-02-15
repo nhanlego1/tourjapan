@@ -82,14 +82,6 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
     if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes') :?> <?php
     	
        $data_post = array(
-       	'name_guest' => $_POST['t3di_guest'],
-        'phone_guest' => $_POST['t0fl_guest'],
-        'email_guest' => $_POST['t9hg_guest'],
-        'code1_guest' => $_POST['t3gq_guest'],
-        'code2_guest' => $_POST['t0sz_guest'],
-        'quan_guest' => $_POST['s5bo_guest'],
-        'tinh_guest' => $_POST['t4ii_guest'],
-        'add_guest' => $_POST['t0pi_guest'],
         'name_house' => $_POST['t0zz'],
         'ngu_am' => $_POST['t7pa'],
         'price_one_night' => $_POST['t8sb'],
@@ -249,6 +241,25 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
         foreach ($_POST['c1jz'] as $key=>$value) {
             if($value!='') $c1jz.=$value.",";
         }
+		 require_once( ABSPATH . 'wp-admin/includes/image.php' );
+        require_once( ABSPATH . 'wp-admin/includes/file.php' );
+        require_once( ABSPATH . 'wp-admin/includes/media.php' );
+
+         if ($_FILES['f9og']['name']!='') $attachment_id = media_handle_upload( 'f9og', 0 ); else  $attachment_id = null;
+          if ($_FILES['f9oe']['name']!='')$attachment_id_1 = media_handle_upload( 'f9oe', 0 ); else  $attachment_id_1 = null;
+         if ($_FILES['f5iq']['name']!='') $attachment_id_2 = media_handle_upload( 'f5iq', 0 );else  $attachment_id_2 = null;
+          if ($_FILES['f8ss']['name']!='') $attachment_id_3 = media_handle_upload( 'f8ss', 0 );else  $attachment_id_3 = null;
+          if ($_FILES['f4vl']['name']!='') $attachment_id_4 = media_handle_upload( 'f4vl', 0 );else  $attachment_id_4 = null;
+          if ($_FILES['f7fh']['name']!='') $attachment_id_5 = media_handle_upload( 'f7fh', 0 );else  $attachment_id_5 = null;
+          if ($_FILES['f1iw']['name']!='') $attachment_id_6 = media_handle_upload( 'f1iw', 0 );else  $attachment_id_6 = null;
+          if ($_FILES['f2va']['name']!='') $attachment_id_7 = media_handle_upload( 'f2va', 0 );else  $attachment_id_7 = null;
+          if ($_FILES['f3jx']['name']!='') $attachment_id_8 = media_handle_upload( 'f3jx', 0 );else  $attachment_id_8 = null;
+          if ($_FILES['f6oc']['name']!='') $attachment_id_9 = media_handle_upload( 'f6oc', 0 );else  $attachment_id_9 = null;
+          if ($_FILES['f1uw']['name']!='') $attachment_id_10 = media_handle_upload( 'f1uw', 0 );else  $attachment_id_10 = null;
+          if ($_FILES['f6ta']['name']!='') $attachment_id_11 = media_handle_upload( 'f6ta', 0 );else  $attachment_id_11 = null;
+          if ($_FILES['f2ab']['name']!='') $attachment_id_12 = media_handle_upload( 'f2ab', 0 );else  $attachment_id_12 = null;
+          if ($_FILES['f7cv']['name']!='')$attachment_id_13 = media_handle_upload( 'f7cv', 0 );else  $attachment_id_13= null;
+          if ($_FILES['f0tv']['name']!='') $attachment_id_14 = media_handle_upload( 'f0tv', 0 );else  $attachment_id_14 = null;
        ?>
    <form action="<?php echo esc_url(home_url('/'));?>hause_entry/" method="post">
         <fieldset>
@@ -286,21 +297,21 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
             <input type="hidden" name="c1jz" value="<?php echo $c1jz; ?>">
             <input type="hidden" name="t4ai" value="<?php echo $_POST['t4ai']; ?>">
 
-            <input type="hidden" name="file_f9og" value="<?php echo $_FILES['f9og']['name']; ?>">
-          <input type="hidden" name="file_f9oe" value="<?php echo $_FILES['f9oe']['name']; ?>">
-           <input type="hidden" name="file_f5iq" value="<?php echo $_FILES['f5iq']['name']; ?>">
-           <input type="hidden" name="file_f8ss" value="<?php echo $_FILES['f8ss']['name']; ?>">
-           <input type="hidden" name="file_f4vl" value="<?php echo $_FILES['f4vl']['name']; ?>">
-            <input type="hidden" name="file_f7fh" value="<?php echo $_FILES['f7fh']['name']; ?>">
-          <input type="hidden" name="file_f1iw" value="<?php echo $_FILES['f1iw']['name']; ?>">
-           <input type="hidden" name="file_f2va" value="<?php echo $_FILES['f2va']['name']; ?>">
-           <input type="hidden" name="file_f3jx" value="<?php echo $_FILES['f3jx']['name']; ?>">
-           <input type="hidden" name="file_f6oc" value="<?php echo $_FILES['f6oc']['name']; ?>">
-            <input type="hidden" name="file_f1uw" value="<?php echo $_FILES['f1uw']['name']; ?>">
-          <input type="hidden" name="file_f6ta" value="<?php echo $_FILES['f6ta']['name']; ?>">
-           <input type="hidden" name="file_f2ab" value="<?php echo $_FILES['f2ab']['name']; ?>">
-           <input type="hidden" name="file_f7cv" value="<?php echo $_FILES['f7cv']['name']; ?>">
-           <input type="hidden" name="file_f0tv" value="<?php echo $_FILES['f0tv']['name']; ?>">
+            <input type="hidden" name="file_f9og" value="<?php echo $attachment_id; ?>">
+          <input type="hidden" name="file_f9oe" value="<?php echo $attachment_id_1; ?>">
+           <input type="hidden" name="file_f5iq" value="<?php echo $attachment_id_2; ?>">
+           <input type="hidden" name="file_f8ss" value="<?php echo $attachment_id_3; ?>">
+           <input type="hidden" name="file_f4vl" value="<?php echo $attachment_id_4; ?>">
+            <input type="hidden" name="file_f7fh" value="<?php echo $attachment_id_5; ?>">
+          <input type="hidden" name="file_f1iw" value="<?php echo $attachment_id_6; ?>">
+           <input type="hidden" name="file_f2va" value="<?php echo $attachment_id_7; ?>">
+           <input type="hidden" name="file_f3jx" value="<?php echo $attachment_id_8; ?>">
+           <input type="hidden" name="file_f6oc" value="<?php echo $attachment_id_9; ?>">
+            <input type="hidden" name="file_f1uw" value="<?php echo $attachment_id_10; ?>">
+          <input type="hidden" name="file_f6ta" value="<?php echo $attachment_id_11; ?>">
+           <input type="hidden" name="file_f2ab" value="<?php echo $attachment_id_12; ?>">
+           <input type="hidden" name="file_f7cv" value="<?php echo $attachment_id_13; ?>">
+           <input type="hidden" name="file_f0tv" value="<?php echo $attachment_id_14; ?>">
 
 
             <input type="hidden" name="t6rs" value="<?php echo $_POST['t6rs']; ?>">
@@ -416,21 +427,21 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
                 <tr>
                     <th>写真</th>
                     <td>
-                      <?php echo $_FILES['f9og']['name']; ?><br>
-                      <?php echo $_FILES['f9oe']['name']; ?><br>
-                      <?php echo $_FILES['f5iq']['name']; ?><br>
-                     <?php echo $_FILES['f8ss']['name']; ?><br>
-                     <?php echo $_FILES['f4vl']['name']; ?><br>
-                     <?php echo $_FILES['f7fh']['name']; ?><br>
-                      <?php echo $_FILES['f1iw']['name']; ?><br>
-                      <?php echo $_FILES['f2va']['name']; ?><br>
-                     <?php echo $_FILES['f3jx']['name']; ?><br>
-                     <?php echo $_FILES['f6oc']['name']; ?><br>
-                     <?php echo $_FILES['f1uw']['name']; ?><br>
-                      <?php echo $_FILES['f6ta']['name']; ?><br>
-                     <?php echo $_FILES['f2ab']['name']; ?><br>
-                   <?php echo $_FILES['f7cv']['name']; ?><br>
-                 <?php echo $_FILES['f0tv']['name']; ?>        </td>
+                      <?php if($attachment_id!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>';?><br>
+                      <?php if($attachment_id_1!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?><br>
+                      <?php if($attachment_id_2!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_3!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_4!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_5!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_5,'thumbnail')[0].'"/>'; ?><br>
+                      <?php if($attachment_id_6!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_6,'thumbnail')[0].'"/>'; ?><br>
+                      <?php if($attachment_id_7!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_7,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_8!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_8,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_9!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_9,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_10!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_10,'thumbnail')[0].'"/>'; ?><br>
+                      <?php if($attachment_id_11!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_11,'thumbnail')[0].'"/>'; ?><br>
+                     <?php if($attachment_id_12!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_12,'thumbnail')[0].'"/>'; ?><br>
+                   <?php if($attachment_id_13!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_13,'thumbnail')[0].'"/>'; ?><br>
+                 <?php if($attachment_id_14!=null)echo '<img src="'.wp_get_attachment_image_src($attachment_id_14,'thumbnail')[0].'"/>'; ?> </td>
                 </tr>
                 <tr>
                     <th>ホームページURL</th>
