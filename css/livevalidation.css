@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+em.error, ul.error {
+	color: #F60;
+	background-color: inherit;
+}
+
+em.error {
+	display: block;
+	margin-bottom: 2px;
+	font-weight: normal;
+}
+
+input.error, textarea.error, select.error, span.error label, span.error input {
+	background: #FFE6D5;
+}
+
+em.done, ul.done {
+	color: #3A3;
+	background-color: inherit;
+}
+
+em.done {
+	display: block;
+	margin-bottom: 2px;
+	font-weight: normal;
+}
+
+input.done, textarea.done, select.done, span.done label, span.done input {
+	background: #CEF0CE;
+}
+
+/* preload */
+form {
+	background: url(mark.gif) no-repeat 0 -1000px;
+}
+
+em.error {
+	padding-left: 17px;
+	background: url(mark.gif) no-repeat 0 -2px;
+}
+
+em.done {
+	padding-left: 17px;
+	background: url(mark.gif) no-repeat 0 -42px;
+}
+
+.watermark {
+	color: #888;
+}

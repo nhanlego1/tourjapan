@@ -1,0 +1,195 @@
+.flat {
+	margin-left: 0;
+}
+
+.flat * {
+	display: inline;
+}
+
+.flat li {
+	margin: 0 2px;
+}
+
+.none {
+	display: none;
+}
+
+.lalign {
+	text-align: left;
+}
+
+.ralign {
+	text-align: right;
+}
+
+.calign {
+	text-align: center;
+}
+
+.talign {
+	vertical-align: top;
+}
+
+.balign {
+	vertical-align: bottom;
+}
+
+.lfloat {
+	float: left;
+	width: auto;
+}
+
+.rfloat {
+	float: right;
+	width: auto;
+}
+
+.kfloat {
+	clear: both;
+}
+
+.gray {
+	color: #888;
+	background-color: inherit;
+}
+
+.xxsmall {
+	font-size: .7em;
+}
+
+.xsmall {
+	font-size: .8em;
+}
+
+.small {
+	font-size: .9em;
+}
+
+.large {
+	font-size: 1.1em;
+}
+
+.xlarge {
+	font-size: 1.2em;
+}
+
+.xxlarge {
+	font-size: 1.3em;
+}
+
+.new {
+	margin: 0 4px;
+	font-size: .9em;
+	font-weight: bold;
+	color: #F60;
+	background-color: inherit;
+}
+
+.required {
+	margin: 0 4px;
+	font-size: .9em;
+	font-weight: bold;
+	color: #F60;
+	background-color: inherit;
+}
+
+.disabled {
+	color: inherit;
+	background-color: #F1F1F1;
+}
+
+.image img {
+	padding: 4px 4px;
+	color: inherit;
+	background-color: #FFF;
+	vertical-align: bottom;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+}
+
+.image a:hover img {
+}
+
+.xgraph {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.xgraph em {
+	height: 1.2em;
+	display: block;
+	line-height: 0;
+	font-weight: normal;
+	color: #000;
+	background-color: #DDD;
+}
+
+.xgraph em span {
+	position: relative;
+	top: .7em;
+	left: 2px;
+	font-size: .8em;
+}
+
+.ygraph {
+	height: 100%;
+	vertical-align: bottom;
+}
+
+.ygraph em {
+	width: 1.2em;
+	display: block;
+	line-height: 0;
+	font-weight: normal;
+	color: #000;
+	background-color: #DDD;
+}
+
+.ygraph em span {
+	position: relative;
+	top: .7em;
+	left: 2px;
+	font-size: .8em;
+}
+
+span.tooltip, abbr, dfn {
+	cursor: help;
+	border-bottom: 1px dashed;
+}
+
+a.tooltip {
+	position: relative;
+}
+
+a.tooltip span {
+	top: 2.8em;
+	left: -1.7em;
+	padding: 3px;
+	display: none;
+	color: #000;
+	background-color: #FFFFE1;
+	white-space: nowrap;
+	font-weight: normal;
+	text-decoration: none;
+	border: 1px solid #888;
+}
+
+a.tooltip:hover {
+	display: inline;
+	z-index: 100;
+}
+
+a.tooltip:hover span {
+	display: block;
+	position: absolute;
+}
+
+.hslice {
+	display: none;
+}
+
+.entry-title {
+}
+
+.entry-content {
+}

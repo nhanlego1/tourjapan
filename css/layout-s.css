@@ -1,0 +1,23 @@
+th {
+	border: 0;
+	display: block;
+	background-color: #F0F0F0;
+}
+
+td {
+	border: 0;
+	display: block;
+	background-color: #FAFAFA;
+}
+
+div#container {
+	width: 100%;
+}
+
+input[type=text], input[type=file], input[type=password], textarea {
+	width: 96%;
+}
+
+select {
+	max-width: 96%;
+}

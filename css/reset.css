@@ -1,0 +1,168 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+
+body {
+	line-height: 1em;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+th {
+	padding: 6px 7px;
+	text-align: center;
+}
+
+td {
+	padding: 6px 7px;
+}
+
+ol {
+	margin-left: 1.6em;
+	list-style-type: decimal;
+}
+
+ul {
+	margin-left: 1.6em;
+	list-style-type: disc;
+}
+
+dt {
+	margin-top: .5em;
+}
+
+dd {
+	margin-left: 1.3em;
+}
+
+caption {
+	text-align: left;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+abbr, dfn {
+	font-weight: inherit;
+}
+
+hr {
+	width: 100%;
+}
+
+legend {
+	
+}
+
+input, textarea, select {
+	color: inherit;
+	background-color: #FFF;
+	border: 1px solid #D7D7D7;
+	margin: 1px 0;
+}
+
+input {
+	vertical-align: middle;
+}
+
+input[type=text] {
+	    height: 2em;
+	padding: 5px 5px 0 5px;
+	font-family: "MS P????", "?????? ProN W3", "Hiragino Kaku Gothic ProN", Osaka, Verdana, sans-serif;
+}
+
+input[type=file] {
+	
+	padding: 5px 5px 0 5px;
+	font-family: "MS P????", "?????? ProN W3", "Hiragino Kaku Gothic ProN", Osaka, Verdana, sans-serif;
+}
+
+input[type=password] {
+	height: 1.5em;
+	padding: 5px 5px 0 5px;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+input[type=radio], input[type=checkbox] {
+	padding: 1px 0;
+	margin-right: 3px;
+}
+
+input[type=submit], input[type=reset], input[type=button], button {
+	min-width: 8em;
+	height: 2.4em;
+	cursor: pointer;
+	text-align: center;
+	color: inherit;
+	background-color: #F1F1F1;
+}
+
+input[type=image] {
+	cursor: pointer;
+	text-align: center;
+}
+
+input[type=reset] {
+	min-width: 6em;
+	color: #FFF;
+	background-color: #750000;
+	padding-left: 1px;
+	letter-spacing: 1px;
+}
+
+input[type=submit] {
+	width: 11em;
+	color: #FFF;
+	background-color: #236;
+	padding-left: 4px;
+	letter-spacing: 4px;
+}
+
+textarea {
+	padding: 5px;
+	font-family: "MS ????", "Osaka-??", monospace;
+}
+
+select {
+	vertical-align: middle;
+}
+
+select[multiple=multiple] {
+	vertical-align: bottom;
+	height: auto;
+}
+
+select option {
+	padding: 0 3px;
+}
+
+select optgroup option {
+	margin-left: 2em;
+}
+
+label {
+	cursor: pointer;
+}
+
+label input {
+	border: 0;
+	color: inherit;
+	background-color: transparent;
+}

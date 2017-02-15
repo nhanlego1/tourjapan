@@ -1,0 +1,20 @@
+th {
+	width: 25%;
+	border: 1px solid #D5D5D5;
+}
+
+td {
+	border: 1px solid #D5D5D5;
+}
+
+div#container {
+	width: 769px;
+}
+
+tr:nth-child(even) {
+	background-color: #FAFAFA;
+}
+
+tr:nth-child(odd) {
+	background-color: #F2F2F2;
+}
