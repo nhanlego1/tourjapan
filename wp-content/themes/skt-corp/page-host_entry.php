@@ -220,25 +220,31 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
 <?php endif;?>
 <?php  
  if (isset($_POST['to_step_2']) and $_POST['to_step_2']=='yes'): ?><?php
-    $c9oq='';
+		$c9oq='';
         
-        foreach ($_POST['c9oq'] as $key=>$value) {
-            if($value!='') $c9oq.=$value;
-        }
+		if($_POST['c9oq']  != null){
+			foreach ($_POST['c9oq'] as $key=>$value) {
+				if($value!='') $c9oq.=$value;
+			}
+		}
         $c9lr='';
-        foreach ($_POST['c9lr'] as $key=>$value) {
-            if($value!='') $c9lr.=$value;
-        }
+		if($_POST['c9lr'] != null){
+			foreach ($_POST['c9lr'] as $key=>$value) {
+				if($value!='') $c9lr.=$value;
+			}
+		}
+	        //echo ABSPATH.'wp-admin/includes/image.php';
+        //exit();
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         require_once( ABSPATH . 'wp-admin/includes/file.php' );
         require_once( ABSPATH . 'wp-admin/includes/media.php' );
 
-         $attachment_id = media_handle_upload( 'f6et', 0 );
-         $attachment_id_1 = media_handle_upload( 'f6rs', 0 );
-         $attachment_id_2 = media_handle_upload( 'f6hl', 0 );
-         $attachment_id_3 = media_handle_upload( 'f5ue', 0 );
-         $attachment_id_4 = media_handle_upload( 'f5vi', 0 );
-         $attachment_id_5 = media_handle_upload( 'f9gp', 0 );
+         if ($_FILES['f6et']['name']!='') $attachment_id = media_handle_upload( 'f6et', 0 ); else $attachment_id = null;
+         if ($_FILES['f6rs']['name']!='') $attachment_id_1 = media_handle_upload( 'f6rs', 0 ); else $attachment_id_1 = null;
+         if ($_FILES['f6hl']['name']!='') $attachment_id_2 = media_handle_upload( 'f6hl', 0 ); else $attachment_id_2 = null;
+         if ($_FILES['f5ue']['name']!='') $attachment_id_3 = media_handle_upload( 'f5ue', 0 ); else $attachment_id_3 = null;
+         if ($_FILES['f5vi']['name']!='') $attachment_id_4 = media_handle_upload( 'f5vi', 0 ); else $attachment_id_4 = null;
+         if ($_FILES['f9gp']['name']!='') $attachment_id_5 = media_handle_upload( 'f9gp', 0 ); else $attachment_id_5 = null;
 
         if ( is_wp_error( $attachment_id ) || is_wp_error( $attachment_id_1 ) || is_wp_error( $attachment_id_2 ) ||is_wp_error( $attachment_id_3) || is_wp_error( $attachment_id_4 ) || is_wp_error( $attachment_id_5)) {
           echo 'Error';
@@ -288,8 +294,8 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
             <input type="hidden" name="c9lr[]" value="<?php echo $_POST['c9lr'][0]; ?>">
             
 
-                    <input type="hidden" name="file_zone1" value="<?php echo $attachment_id ?>">
-          <input type="hidden" name="file_zone2" value="<?php echo $attachment_id_1 ?>">
+			<input type="hidden" name="file_zone1" value="<?php echo $attachment_id ?>">
+           <input type="hidden" name="file_zone2" value="<?php echo $attachment_id_1 ?>">
            <input type="hidden" name="file_zone3" value="<?php echo $attachment_id_2 ?>">
 
 
@@ -407,21 +413,21 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                  <tr>
                     <th>お勧めスポット①</th>
                     <td>
-                             <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>'; ?>
+                             <?php if($attachment_id!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>'; ?>
                         <?php echo $_POST['t8kg']; ?>
-                         <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?>
+                         <?php if($attachment_id_1!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?>
                          <?php echo $_POST['t5ue']; ?>
-                           <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?>
+                           <?php  if($attachment_id_2!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?>
                              <?php echo$_POST['t5wp']; ?>  </td>
                 </tr>
                  <tr>
                     <th>お勧めグルメ</th>
                     <td>
-                        <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?>
+                        <?php if($attachment_id_3!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?>
                        <?php echo $_POST['t4gt']; ?>
-                      <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?>
+                      <?php  if($attachment_id_4!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?>
                       <?php echo  $_POST['t0zf']; ?> 
-                    <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_5
+                    <?php  if($attachment_id_5!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_5
                     ,'thumbnail')[0].'"/>'; ?>
                       <?php echo $_POST['t8ia']; ?> </td>
                 </tr>
@@ -1051,30 +1057,20 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
 <tr>
           <th>お勧めスポット①<em class="required">※</em></th>
           <td>
-            <input type="file" id="f6et" name="f6et" size="60" required><br>
-            <span class="aside">スポット名①</span><br>
-            <input type="text" id="t8kg" name="t8kg" size="60" value="" maxlength="300" required><br>
-            <input type="file" required id="f6rs" name="f6rs" size="60"><br>
-            <span class="aside">スポット名②</span><br>
-            <input type="text" required id="t5ue" name="t5ue" size="60" value="" maxlength="300"><br>
-            <input type="file" required id="f6hl" name="f6hl" size="60"><br>
-            <span class="aside">スポット名③</span><br>
-            <input type="text" id="t5wp" required name="t5wp" size="60" value="" maxlength="300">
+            <input type="file" id="f6et" name="f6et" size="60"><br><span class="aside">スポット名①</span><br><input type="text" id="t8kg" name="t8kg" size="60" value="" maxlength="300"><br> 
+			
+			<input type="file" id="f6rs" name="f6rs" size="60"><br><span class="aside">スポット名②</span><br><input type="text" id="t5ue" name="t5ue" size="60" value="" maxlength="300"><br>
+			
+            <input type="file" id="f6hl" name="f6hl" size="60"><br> <span class="aside">スポット名③</span><br><input type="text" id="t5wp" name="t5wp" size="60" value="" maxlength="300">
           </td>
         </tr>
 <tr>
           <th>お勧めグルメ<em class="required">※</em></th>
           <td>
             <span class="aside">例）○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-            <input type="file" id="f5ue" name="f5ue" size="60" required><br>
-            <span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-            <input type="text" required id="t4gt" name="t4gt" size="60" value="" maxlength="300"><br>
-            <input type="file" required id="f5vi" name="f5vi" size="60"><br>
-            <span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-            <input type="text" required id="t0zf" name="t0zf" size="60" value="" maxlength="300"><br>
-            <input type="file" required id="f9gp" name="f9gp" size="60"><br>
-            <span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-            <input type="text" required id="t8ia" name="t8ia" size="60" value="" maxlength="300">
+			<input type="file" id="f5ue" name="f5ue" size="60" ><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t4gt" name="t4gt" size="60" value="" maxlength="300"><br>
+            <input type="file"  id="f5vi" name="f5vi" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t0zf" name="t0zf" size="60" value="" maxlength="300"><br>
+            <input type="file"  id="f9gp" name="f9gp" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t8ia" name="t8ia" size="60" value="" maxlength="300">
           </td>
         </tr>
                               </tbody></table>
