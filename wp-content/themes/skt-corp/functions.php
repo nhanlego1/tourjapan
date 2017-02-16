@@ -67,17 +67,74 @@ function wps_theme_func(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name host</th><th>Email host</th><th>Phone host</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff">
+				 <th>Name</th>
+				 <th>Nickname</th>
+				 <th>Name (Romaji)</th>
+				 <th>Street address</th>
+				 <th>Birthday</th>
+				 <th>Cellphone number</th>
+				 <th>Supported languages</th>
+				 <th>Profile</th>
+				 <th>Mail address</th>
+				 <th>Basic guide uptime</th>
+				 <th>Minimum guide time</th>
+				 <th>Hourly wages for the minimum guide time</th>
+				 <th>Permitted early / late night operation</th>
+				 <th>Hourly early in the morning / late at night</th>
+				 <th>Guidable area</th>
+				 <th>Moving means at guidance</th>
+				 <th>Current occupation</th>
+				 <th>Recommended spot</th> 
+				 <th>Recommended gourmet</th>
+				 <th>Payed</th>
+				 <th>money amount</th>
+				 <th></th><tr></thead>';
+
+
 				foreach( $wpdb->get_results("SELECT * FROM  host_reg") as $key => $row) {
+
+					$file = '';
+                    $file2 = '';
+                     if($row->file_zone1!=null) $file.='<img src="'.wp_get_attachment_image_src($row->file_zone1,'thumbnail')[0].'"/>';
+                       if($row->file_note1!=null)$file.= '<div>Spot name ①: '.$row->file_note1.'</div> <hr>';
+                     if($row->file_zone2!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone2,'thumbnail')[0].'"/>';
+                      if($row->file_note2!=null)$file.= '<div>Spot name ②: '.$row->file_note2.'</div> <hr>';
+                      if($row->file_zone3!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone3,'thumbnail')[0].'"/>';
+                       if($row->file_note3!=null)$file.= '<div>Spot name ③: '.$row->file_note2.'</div> <hr>';
+                
+                 
+              
+                     if($row->file_eat1!=null) $file2.='<img src="'.wp_get_attachment_image_src($row->file_eat1,'thumbnail')[0].'"/>';
+                       if($row->file_eat_note1!=null) $file2.='<div> Recommended gourmet name 1: '.$row->file_eat_note1.'</div> <hr>';
+                     if($row->file_eat2!=null) $file2.= '<img src="'.wp_get_attachment_image_src($row->file_eat2,'thumbnail')[0].'"/>';
+                      if($row->file_eat_note2!=null) $file2.= '<div> Recommended gourmet name 2: '.$row->file_eat_note2.'</div> <hr>';
+                      if($row->file_eat3!=null) $file2.= '<img src="'.wp_get_attachment_image_src($row->file_eat3,'thumbnail')[0].'"/>';
+                      if($row->file_eat_note3!=null)  $file2.= '<div> Recommended gourmet name 3: '.$row->file_eat_note3.'</div> <hr>';
+                
+
+
 					 echo '
-					 <tr><td>'.$row->name_host.'</td><td>'
-					 .$row->email_host.'</td><td>'
+					 <tr><td>'
+					 .$row->name_host.'</td><td>'
+					 .$row->alias_host.'</td><td>'
+					 .$row->name2_host.'</td><td>'
+					 .$row->quan_host.'-'.$row->tinh_host.'-'.$row->add_host.'</td><td>'
+					 .$row->birth1_host.'-'.$row->birth_month.'-'.$row->birth_year.'</td><td>'
 					 .$row->phone_host.'</td><td>'
-					 .$row->code1_host.'</td><td>'
-					 .$row->code2_host.'</td><td>'
-					 .$row->quan_host.'</td><td>'
-					 .$row->tinh_host.'</td><td>'
-					 .$row->add_guest.'</td><td>'
+					 .$row->language.'</td><td>'
+					 .'['.$row->profile1.']'.'['.$row->profile2.']'.'</td><td>'
+					  .$row->email_host.'</td><td>'
+					  .$row->time_action.'</td><td>'
+					  .$row->time_minimum.'</td><td>'
+					  .$row->time_salary.'</td><td>'
+					  .$row->night_maybe.'</td><td>'
+					  .$rows->salary_min_max.'<td>'
+					  .$row->zone1.'-'.$row->zone2.'-'.$row->zone3.'-'.$row->zone4.'-'.$row->zone5.'</td><td>'
+					  .$row->phuong_tien.'</td><td>'
+					  .$row->career.'</td><td>'
+					  .$file.'</td><td>'
+					  .$file2.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=theme-options&order_host_id='.$row->id.'">Xóa</a></td><tr>';
@@ -104,17 +161,75 @@ function wps_theme_func_settings(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name tour</th><th>Email tour</th><th>Phone tour</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff">
+				 <th>Tour title</th>
+                 <th>Tour theme</th>
+                 <th>Tour outline· PR</th>
+                 <th>Tour schedule image</th>
+                 <th>Point of departure</th>
+                 <th>Target age</th>
+                 <th>Tour fee</th>
+                 <th>Included in price</th>
+                 <th>Time required</th>
+                 <th>Supported languages</th>
+                 <th>Presence of meals</th>
+                 <th>Pick up or not</th>
+                 <th>Holidays</th>
+                 <th>Minimum performers</th>
+                 <th>Notes</th>
+				 <th>Remarks</th>
+				  <th>Inquiries</th>
+				   <th>Name of person in charge</th>
+				    <th>Street address</th>
+				     <th>phone number</th>
+				 <th>mail address</th>
+				 <th>Cellphone number</th>
+				 <th>Image photo</th>
+                 <th>Payed</th>
+				 <th>money amount</th>
+				 <th></th>
+				 <tr>
+				 </thead>';
 				foreach( $wpdb->get_results("SELECT * FROM  tour_reg") as $key => $row) {
+
+					$file = '';
+                  
+                     if($row->file_zone1!=null) $file.='<img src="'.wp_get_attachment_image_src($row->file_zone1,'thumbnail')[0].'"/>';
+        
+                     if($row->file_zone2!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone2,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone3!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone3,'thumbnail')[0].'"/>';
+                       if($row->file_zone4!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone4,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone5!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone5,'thumbnail')[0].'"/>';
+
+                  
+
 					 echo '
-					 <tr><td>'.$row->name_tour.'</td><td>'
-					 .$row->mail_address.'</td><td>'
+					 <tr><td>'
+					 .$row->topic_tour.'</td><td>'
+					 .$row->nametour.'</td><td>'
+					 .$row->outline_tour.'</td><td>'
+					 .$row->schedule_tour.'</td><td>'
+					 .$row->start_tour.'</td><td>'
+					 .$row->age_taget.'</td><td>'
+					 .$row->price_tour.'</td><td>'
+					 .$row->include_tour.'</td><td>'
+					 .$row->time_need.'</td><td>'
+					 .$row->language_tour.'</td><td>'
+					 .$row->food.'</td><td>'
+					 .$row->pickup.'</td><td>'
+					 .$row->holidays.'</td><td>'
+					 .$row->minimum_performers.'</td><td>'
+					 .$row->notes.'</td><td>'
+					 .$row->remarks.'</td><td>'
+					 .$row->inquiries.'</td><td>'
+					 .$row->person_charge.'</td><td>'
+					 .$row->zone1.'-'.$row->zone2.'-'.$row->zone3.'-'.$row->zone4.'-'.$row->zone5.'</td><td>'
 					 .$row->phone_number.'</td><td>'
-					 .$row->zone1.'</td><td>'
-					 .$row->zone2.'</td><td>'
-					 .$row->quan_guest.'</td><td>'
-					 .$row->tinh_guest.'</td><td>'
-					 .$row->add_guest.'</td><td>'
+					 .$row->mail_address.'</td><td>'
+					 .$row->phone_number2.'</td><td>'
+					  .$file.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=tour-orders&order_tour_id='.$row->id.'">Xóa</a></td><tr>';
@@ -141,23 +256,92 @@ function wps_theme_func_faq(){
 				';
 				global  $wpdb;
 				echo '<table style="width:95%;margin-top:20px;"><thead>
-				 <tr style="background:#738e96; color:#fff"><th>Name house</th><th>Email house</th><th>Phone house</th><th>Postalcode1</th><th>Postalcode2</th><th>Districts</th><th>Provincial</th><th>Address</th><th>Payed</th><th>money amount</th><th></th><tr></thead>';
+				 <tr style="background:#738e96; color:#fff">
+				<th>Name</th>
+                 <th>Phonetic</th>
+                 	<th>Price (per night)</th>
+                 <th>Property address</th>
+                 	<th>Phone number</th>
+                 <th>Email</th>
+                 	<th>Cellphone number</th>
+                 <th>Property type</th>
+                 	<th>Bet type</th>
+                 <th>Number of guests allowed</th>
+                 	<th>Bathroom</th>
+                 <th>Bet number</th>
+                 	<th>Amenity</th>
+                 <th>Facility</th>
+                 	<th>Other</th>
+                 <th>Minimum stay</th>
+                 	<th>check-in</th>
+                 <th>check out</th>
+                 <th>Cleaning fee</th>
+                 	<th>Charges for separate cleaning fee</th>
+                 <th>Homepage URL</th>
+                 <th>Photo</th>
+                  <th>Payed</th>
+				 <th>money amount</th>
+				 <th></th>
+				 <tr></thead>';
 				foreach( $wpdb->get_results("SELECT * FROM  house_reg") as $key => $row) {
+
+					$file = '';
+                  
+                     if($row->file_zone1!=null) $file.='<img src="'.wp_get_attachment_image_src($row->file_zone1,'thumbnail')[0].'"/>';
+        
+                     if($row->file_zone2!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone2,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone3!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone3,'thumbnail')[0].'"/>';
+                       if($row->file_zone4!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone4,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone5!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone5,'thumbnail')[0].'"/>';
+                         if($row->file_zone6!=null) $file.='<img src="'.wp_get_attachment_image_src($row->file_zone6,'thumbnail')[0].'"/>';
+        
+                     if($row->file_zone7!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone7,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone8!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone8,'thumbnail')[0].'"/>';
+                       if($row->file_zone9!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone9,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone10!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone10,'thumbnail')[0].'"/>';
+                         if($row->file_zone11!=null) $file.='<img src="'.wp_get_attachment_image_src($row->file_zone11,'thumbnail')[0].'"/>';
+        
+                     if($row->file_zone12!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone12,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone13!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone13,'thumbnail')[0].'"/>';
+                       if($row->file_zone14!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone4,'thumbnail')[0].'"/>';
+                
+                      if($row->file_zone15!=null) $file.= '<img src="'.wp_get_attachment_image_src($row->file_zone15,'thumbnail')[0].'"/>';
 					 echo '
-					 <tr><td>'.$row->name_house.'</td><td>'
-					 .$row->mail_address.'</td><td>'
+					 <tr><td>'
+					 .$row->name_house.'</td><td>'
+					 .$row->ngu_am.'</td><td>'
+					 .$row->price_one_night.'</td><td>'
+					 .$row->zone1.'-'.$row->zone2.'-'.$row->zone3.'-'.$row->zone4.'-'.$row->zone5.'</td><td>'
 					 .$row->phone_number.'</td><td>'
-					 .$row->zone1.'</td><td>'
-					 .$row->zone1.'</td><td>'
-					 .$row->quan_guest.'</td><td>'
-					 .$row->tinh_guest.'</td><td>'
-					 .$row->add_guest.'</td><td>'
+					 .$row->mail_address.'</td><td>'
+					 .$row->phone_number2.'</td><td>'
+					 .$row->property_type.'</td><td>'
+					 .$row->bet_type.'</td><td>'
+					 .$row->guests_allowed.'</td><td>'
+					 .$row->bathroom.'</td><td>'
+					 .$row->bet_number.'</td><td>'
+					 .$row->amenity.'</td><td>'
+					 .$row->facility.'</td><td>'
+					 .$row->other.'</td><td>'
+					 .$row->minimum_nights.'</td><td>'
+					 .$row->check_in.'</td><td>'
+					 .$row->check_out.'</td><td>'
+					 .$row->cleaning_fee.'</td><td>'
+					 .$row->separate_cleaning_fee.'</td><td>'
+					 .$row->homepage_url.'</td><td>'
+					 .$file.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
 					 .'<a href="?page=house-orders&order_house_id='.$row->id.'">Xóa</a></td><tr>';
 				}
 				echo '</table>';
 }
+
 function skt_corp_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Blog Sidebar', 'skt-corp' ),

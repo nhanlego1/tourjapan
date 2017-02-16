@@ -105,10 +105,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
     </ul>
   </div>
 </div>
-  <p class="back">
-    <a href="#" onclick="history.back();return false;">←前へ戻る</a>
-    <a href="#">↑ページの先頭へ</a>
-  </p>
+
 </div>
            </p></div>
           </div>
@@ -254,20 +251,20 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
 <?php endif;?>
 <?php  
  if (isset($_POST['to_step_2']) and $_POST['to_step_2']=='yes'): ?><?php
-		$c9oq='';
+    $c9oq='';
         
-		if($_POST['c9oq']  != null){
-			foreach ($_POST['c9oq'] as $key=>$value) {
-				if($value!='') $c9oq.=$value;
-			}
-		}
+    if($_POST['c9oq']  != null){
+      foreach ($_POST['c9oq'] as $key=>$value) {
+        if($value!='') $c9oq.=$value;
+      }
+    }
         $c9lr='';
-		if($_POST['c9lr'] != null){
-			foreach ($_POST['c9lr'] as $key=>$value) {
-				if($value!='') $c9lr.=$value;
-			}
-		}
-	        //echo ABSPATH.'wp-admin/includes/image.php';
+    if($_POST['c9lr'] != null){
+      foreach ($_POST['c9lr'] as $key=>$value) {
+        if($value!='') $c9lr.=$value;
+      }
+    }
+          //echo ABSPATH.'wp-admin/includes/image.php';
         //exit();
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         require_once( ABSPATH . 'wp-admin/includes/file.php' );
@@ -328,7 +325,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
             <input type="hidden" name="c9lr[]" value="<?php echo $_POST['c9lr'][0]; ?>">
             
 
-			<input type="hidden" name="file_zone1" value="<?php echo $attachment_id ?>">
+      <input type="hidden" name="file_zone1" value="<?php echo $attachment_id ?>">
            <input type="hidden" name="file_zone2" value="<?php echo $attachment_id_1 ?>">
            <input type="hidden" name="file_zone3" value="<?php echo $attachment_id_2 ?>">
 
@@ -1092,9 +1089,9 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
           <th>お勧めスポット①<em class="required">※</em></th>
           <td>
             <input type="file" id="f6et" name="f6et" size="60"><br><span class="aside">スポット名①</span><br><input type="text" id="t8kg" name="t8kg" size="60" value="" maxlength="300"><br> 
-			
-			<input type="file" id="f6rs" name="f6rs" size="60"><br><span class="aside">スポット名②</span><br><input type="text" id="t5ue" name="t5ue" size="60" value="" maxlength="300"><br>
-			
+      
+      <input type="file" id="f6rs" name="f6rs" size="60"><br><span class="aside">スポット名②</span><br><input type="text" id="t5ue" name="t5ue" size="60" value="" maxlength="300"><br>
+      
             <input type="file" id="f6hl" name="f6hl" size="60"><br> <span class="aside">スポット名③</span><br><input type="text" id="t5wp" name="t5wp" size="60" value="" maxlength="300">
           </td>
         </tr>
@@ -1102,7 +1099,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
           <th>お勧めグルメ<em class="required">※</em></th>
           <td>
             <span class="aside">例）○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-			<input type="file" id="f5ue" name="f5ue" size="60" ><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t4gt" name="t4gt" size="60" value="" maxlength="300"><br>
+      <input type="file" id="f5ue" name="f5ue" size="60" ><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t4gt" name="t4gt" size="60" value="" maxlength="300"><br>
             <input type="file"  id="f5vi" name="f5vi" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t0zf" name="t0zf" size="60" value="" maxlength="300"><br>
             <input type="file"  id="f9gp" name="f9gp" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t8ia" name="t8ia" size="60" value="" maxlength="300">
           </td>

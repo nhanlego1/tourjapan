@@ -105,10 +105,6 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
     </ul>
   </div>
 </div>
-  <p class="back">
-    <a href="#" onclick="history.back();return false;">←前へ戻る</a>
-    <a href="#">↑ページの先頭へ</a>
-  </p>
 </div>
            </p></div>
           </div>

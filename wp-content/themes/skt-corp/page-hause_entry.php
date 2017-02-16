@@ -104,10 +104,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
     </ul>
   </div>
 </div>
-  <p class="back">
-    <a href="#" onclick="history.back();return false;">←前へ戻る</a>
-    <a href="#">↑ページの先頭へ</a>
-  </p>
+
 </div>
            </p></div>
           </div>
@@ -118,7 +115,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
 <?php endif; ?>
 <?php
     if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes') :?> <?php
-    	
+      
        $data_post = array(
         'name_house' => $_POST['t0zz'],
         'ngu_am' => $_POST['t7pa'],
@@ -243,7 +240,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
  ?>
 <?php  
  if (isset($_POST['to_step_2']) and $_POST['to_step_2']=='yes'):?><?php
- 	  $c6ux='';
+    $c6ux='';
         foreach ($_POST['c6ux'] as $key=>$value) {
             if($value!='') $c6ux.=$value.",";
         }
@@ -279,7 +276,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
         foreach ($_POST['c1jz'] as $key=>$value) {
             if($value!='') $c1jz.=$value.",";
         }
-		 require_once( ABSPATH . 'wp-admin/includes/image.php' );
+     require_once( ABSPATH . 'wp-admin/includes/image.php' );
         require_once( ABSPATH . 'wp-admin/includes/file.php' );
         require_once( ABSPATH . 'wp-admin/includes/media.php' );
 
@@ -496,340 +493,340 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
 <?php endif;?>
  <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3']) && !isset($_GET['amount'])):?>                          
    <form action="<?php echo esc_url(home_url('/'));?>hause_entry/" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-							<input type="hidden" name="to_step_2" value="yes">
+              <input type="hidden" name="to_step_2" value="yes">
                               <fieldset>
                             <fieldset>
                               <legend>ホストになる（ゲストハウス）エントリー...</legend>
                             <table>
-				<tbody><tr>
-					<th>お名前<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t0zz" required name="t0zz" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>フリガナ<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" required id="t7pa" name="t7pa" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>料金（1泊あたり）<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t8sb" required name="t8sb" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>物件住所<em class="required">※</em></th>
-					<td>
-						<span class="lside">郵便番号</span><input type="text" required id="t5kf" name="t5kf" size="4" value="" maxlength="3"><span class="rside">-</span><input type="text" required id="t3hz" name="t3hz" size="7" value="" maxlength="4"><br>
-						<span class="lside">都道府県</span><select id="s0sx" required name="s0sx" size="1">
-							<option value="">----</option>
-							<optgroup label="北海道">
-								<option value="北海道">北海道</option>
-							</optgroup>
-							<optgroup label="東北">
-								<option value="青森県">青森県</option>
-								<option value="岩手県">岩手県</option>
-								<option value="宮城県">宮城県</option>
-								<option value="秋田県">秋田県</option>
-								<option value="山形県">山形県</option>
-								<option value="福島県">福島県</option>
-							</optgroup>
-							<optgroup label="関東">
-								<option value="茨城県">茨城県</option>
-								<option value="栃木県">栃木県</option>
-								<option value="群馬県">群馬県</option>
-								<option value="埼玉県">埼玉県</option>
-								<option value="千葉県">千葉県</option>
-								<option value="東京都">東京都</option>
-								<option value="神奈川県">神奈川県</option>
-								<option value="山梨県">山梨県</option>
-							</optgroup>
-							<optgroup label="信越">
-								<option value="長野県">長野県</option>
-								<option value="新潟県">新潟県</option>
-							</optgroup>
-							<optgroup label="北陸">
-								<option value="富山県">富山県</option>
-								<option value="石川県">石川県</option>
-								<option value="福井県">福井県</option>
-							</optgroup>
-							<optgroup label="東海">
-								<option value="岐阜県">岐阜県</option>
-								<option value="静岡県">静岡県</option>
-								<option value="愛知県">愛知県</option>
-								<option value="三重県">三重県</option>
-							</optgroup>
-							<optgroup label="近畿">
-								<option value="滋賀県">滋賀県</option>
-								<option value="京都府">京都府</option>
-								<option value="大阪府">大阪府</option>
-								<option value="兵庫県">兵庫県</option>
-								<option value="奈良県">奈良県</option>
-								<option value="和歌山県">和歌山県</option>
-							</optgroup>
-							<optgroup label="中国">
-								<option value="鳥取県">鳥取県</option>
-								<option value="島根県">島根県</option>
-								<option value="岡山県">岡山県</option>
-								<option value="広島県">広島県</option>
-								<option value="山口県">山口県</option>
-							</optgroup>
-							<optgroup label="四国">
-								<option value="徳島県">徳島県</option>
-								<option value="香川県">香川県</option>
-								<option value="愛媛県">愛媛県</option>
-								<option value="高知県">高知県</option>
-							</optgroup>
-							<optgroup label="九州">
-								<option value="福岡県">福岡県</option>
-								<option value="佐賀県">佐賀県</option>
-								<option value="長崎県">長崎県</option>
-								<option value="熊本県">熊本県</option>
-								<option value="大分県">大分県</option>
-								<option value="宮崎県">宮崎県</option>
-								<option value="鹿児島県">鹿児島県</option>
-							</optgroup>
-							<optgroup label="沖縄県">
-								<option value="沖縄県">沖縄県</option>
-							</optgroup>
-							<optgroup label="海外">
-								<option value="海外">海外</option>
-							</optgroup>
-						</select><br>
-						<span class="lside">市区町村</span><input type="text" required  id="t4bf" name="t4bf" size="60" value="" maxlength="300"><br>
-						<span class="lside">番地建物</span><input type="text" required id="t1yt" name="t1yt" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>電話番号<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" required id="t4my" name="t4my" size="60" value="" maxlength="300"><br>
-						<span class="bside">ハイフン不要</span>
-					</td>
-				</tr>
-				<tr>
-					<th>メールアドレス<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t0qm" required name="t0qm" size="60" value="" maxlength="300"><br>
-						<span class="bside">例： info@example.com</span>
-					</td>
-				</tr>
-				<tr>
-					<th>携帯番号<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t4cf" required name="t4cf" size="60" value=""  oninput="maxLengthCheck11(this)" maxlength="11"><br>
-						<span class="bside">例： 09011112222 (ハイフン不要)</span>
-					</td>
-				</tr>
-				<tr>
-					<th>物件タイプ<em class="required">※</em></th>
-					<td>
-						
-						<span id="c6ux" class="checkbox">
-							<label for="c6ux0"><input type="checkbox" id="c6ux0" name="c6ux[]" value="□まるまる貸切">□まるまる貸切</label>
-							<label for="c6ux1"><input type="checkbox" id="c6ux1" name="c6ux[]" value="・戸建">・戸建</label>
-							<label for="c6ux2"><input type="checkbox" id="c6ux2" name="c6ux[]" value="・マンション">・マンション</label>
-							<label for="c6ux3"><input type="checkbox" id="c6ux3" name="c6ux[]" value="・アパート">・アパート</label>
-							<label for="c6ux4"><input type="checkbox" id="c6ux4" name="c6ux[]" value="□シェアルーム">□シェアルーム</label>
-							<label for="c6ux5"><input type="checkbox" id="c6ux5" name="c6ux[]" value="・洋室">・洋室</label>
-							<label for="c6ux6"><input type="checkbox" id="c6ux6" name="c6ux[]" value="・和室">・和室</label>
-							<label for="c6ux7"><input type="checkbox" id="c6ux7" name="c6ux[]" value="□個室（ホスト同居）">□個室（ホスト同居）</label>
-							<label for="c6ux8"><input type="checkbox" id="c6ux8" name="c6ux[]" value="・洋室">・洋室</label>
-							<label for="c6ux9"><input type="checkbox" id="c6ux9" name="c6ux[]" value="・和室">・和室</label>
-							<label for="c6ux10"><input type="checkbox" id="c6ux10" name="c6ux[]" value="□個室（ホスト別居）">□個室（ホスト別居）</label>
-							<label for="c6ux11"><input type="checkbox" id="c6ux11" name="c6ux[]" value="・洋室">・洋室</label>
-							<label for="c6ux12"><input type="checkbox" id="c6ux12" name="c6ux[]" value="・和室">・和室</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>ベットタイプ<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7jj" class="checkbox">
-							<label for="c7jj0"><input type="checkbox" id="c7jj0" name="c7jj[]" value="ベット">ベット</label>
-							<label for="c7jj1"><input type="checkbox" id="c7jj1" name="c7jj[]" value="和式布団">和式布団</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>宿泊可能人数<em class="required">※</em></th>
-					<td>
-						
-						<span id="c2aw" class="checkbox">
-							<label for="c2aw0"><input type="checkbox" id="c2aw0" name="c2aw[]" value="1人">1人</label>
-							<label for="c2aw1"><input type="checkbox" id="c2aw1" name="c2aw[]" value="2人">2人</label>
-							<label for="c2aw2"><input type="checkbox" id="c2aw2" name="c2aw[]" value="3人">3人</label>
-							<label for="c2aw3"><input type="checkbox" id="c2aw3" name="c2aw[]" value="4人">4人</label>
-							<label for="c2aw4"><input type="checkbox" id="c2aw4" name="c2aw[]" value="5人">5人</label>
-							<label for="c2aw5"><input type="checkbox" id="c2aw5" name="c2aw[]" value="6人">6人</label>
-							<label for="c2aw6"><input type="checkbox" id="c2aw6" name="c2aw[]" value="7人">7人</label>
-							<label for="c2aw7"><input type="checkbox" id="c2aw7" name="c2aw[]" value="8人">8人</label>
-							<label for="c2aw8"><input type="checkbox" id="c2aw8" name="c2aw[]" value="9人">9人</label>
-							<label for="c2aw9"><input type="checkbox" id="c2aw9" name="c2aw[]" value="10人">10人</label>
-							<label for="c2aw10"><input type="checkbox" id="c2aw10" name="c2aw[]" value="10人～">10人～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>バスルーム<em class="required">※</em></th>
-					<td>
-						
-						<span id="c2cp" class="checkbox">
-							<label for="c2cp0"><input type="checkbox" id="c2cp0" name="c2cp[]" value="1">1</label>
-							<label for="c2cp1"><input type="checkbox" id="c2cp1" name="c2cp[]" value="2">2</label>
-							<label for="c2cp2"><input type="checkbox" id="c2cp2" name="c2cp[]" value="3">3</label>
-							<label for="c2cp3"><input type="checkbox" id="c2cp3" name="c2cp[]" value="4">4</label>
-							<label for="c2cp4"><input type="checkbox" id="c2cp4" name="c2cp[]" value="5">5</label>
-							<label for="c2cp5"><input type="checkbox" id="c2cp5" name="c2cp[]" value="5～">5～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>ベット数<em class="required">※</em></th>
-					<td>
-						
-						<span id="c1in" class="checkbox">
-							<label for="c1in0"><input type="checkbox" id="c1in0" name="c1in[]" value="1">1</label>
-							<label for="c1in1"><input type="checkbox" id="c1in1" name="c1in[]" value="2">2</label>
-							<label for="c1in2"><input type="checkbox" id="c1in2" name="c1in[]" value="3">3</label>
-							<label for="c1in3"><input type="checkbox" id="c1in3" name="c1in[]" value="4">4</label>
-							<label for="c1in4"><input type="checkbox" id="c1in4" name="c1in[]" value="5">5</label>
-							<label for="c1in5"><input type="checkbox" id="c1in5" name="c1in[]" value="6">6</label>
-							<label for="c1in6"><input type="checkbox" id="c1in6" name="c1in[]" value="7">7</label>
-							<label for="c1in7"><input type="checkbox" id="c1in7" name="c1in[]" value="8">8</label>
-							<label for="c1in8"><input type="checkbox" id="c1in8" name="c1in[]" value="9">9</label>
-							<label for="c1in9"><input type="checkbox" id="c1in9" name="c1in[]" value="10">10</label>
-							<label for="c1in10"><input type="checkbox" id="c1in10" name="c1in[]" value="10～">10～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>アメニティ<em class="required">※</em></th>
-					<td>
-						
-						<span id="c9qd" class="checkbox">
-							<label for="c9qd0"><input type="checkbox" id="c9qd0" name="c9qd[]" value="フェイスタオル">フェイスタオル</label>
-							<label for="c9qd1"><input type="checkbox" id="c9qd1" name="c9qd[]" value="ボディータオル">ボディータオル</label>
-							<label for="c9qd2"><input type="checkbox" id="c9qd2" name="c9qd[]" value="シャンプー／ボディーソープ">シャンプー／ボディーソープ</label>
-							<label for="c9qd3"><input type="checkbox" id="c9qd3" name="c9qd[]" value="食器">食器</label>
-							<label for="c9qd4"><input type="checkbox" id="c9qd4" name="c9qd[]" value="朝食">朝食</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>設備<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7vj" class="checkbox">
-							<label for="c7vj0"><input type="checkbox" id="c7vj0" name="c7vj[]" value="テレビ">テレビ</label>
-							<label for="c7vj1"><input type="checkbox" id="c7vj1" name="c7vj[]" value="インターネット">インターネット</label>
-							<label for="c7vj2"><input type="checkbox" id="c7vj2" name="c7vj[]" value="WIFI">WIFI</label>
-							<label for="c7vj3"><input type="checkbox" id="c7vj3" name="c7vj[]" value="エアコン">エアコン</label>
-							<label for="c7vj4"><input type="checkbox" id="c7vj4" name="c7vj[]" value="暖房">暖房</label>
-							<label for="c7vj5"><input type="checkbox" id="c7vj5" name="c7vj[]" value="洗濯機">洗濯機</label>
-							<label for="c7vj6"><input type="checkbox" id="c7vj6" name="c7vj[]" value="乾燥機">乾燥機</label>
-							<label for="c7vj7"><input type="checkbox" id="c7vj7" name="c7vj[]" value="キッチン">キッチン</label>
-							<label for="c7vj8"><input type="checkbox" id="c7vj8" name="c7vj[]" value="電子レンジ">電子レンジ</label>
-							<label for="c7vj9"><input type="checkbox" id="c7vj9" name="c7vj[]" value="オーブン">オーブン</label>
-							<label for="c7vj10"><input type="checkbox" id="c7vj10" name="c7vj[]" value="トースター">トースター</label>
-							<label for="c7vj11"><input type="checkbox" id="c7vj11" name="c7vj[]" value="無料駐車場">無料駐車場</label>
-							<label for="c7vj12"><input type="checkbox" id="c7vj12" name="c7vj[]" value="プール">プール</label>
-							<label for="c7vj13"><input type="checkbox" id="c7vj13" name="c7vj[]" value="ジム">ジム</label>
-							<label for="c7vj14"><input type="checkbox" id="c7vj14" name="c7vj[]" value="ヘアドライヤー">ヘアドライヤー</label>
-							<label for="c7vj15"><input type="checkbox" id="c7vj15" name="c7vj[]" value="アイロン">アイロン</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>その他<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7bz" class="checkbox">
-							<label for="c7bz0"><input type="checkbox" id="c7bz0" name="c7bz[]" value="ペット可能">ペット可能</label>
-							<label for="c7bz1"><input type="checkbox" id="c7bz1" name="c7bz[]" value="ファミリー／子供可能">ファミリー／子供可能</label>
-							<label for="c7bz2"><input type="checkbox" id="c7bz2" name="c7bz[]" value="喫煙可能">喫煙可能</label>
-							<label for="c7bz3"><input type="checkbox" id="c7bz3" name="c7bz[]" value="車椅子">車椅子</label>
-							<label for="c7bz4"><input type="checkbox" id="c7bz4" name="c7bz[]" value="24時間チェックイン可能">24時間チェックイン可能</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>最低泊数<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" required id="t0mc" name="t0mc" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>チェックイン<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" required id="t8vp" name="t8vp" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>チェックアウト<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" required id="t9ju" name="t9ju" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>清掃代<em class="required">※</em></th>
-					<td>
-						
-						<span id="c1jz" class="checkbox">
-							<label for="c1jz0"><input type="checkbox" id="c1jz0" name="c1jz[]" value="含む">含む</label>
-							<label for="c1jz1"><input type="checkbox" id="c1jz1" name="c1jz[]" value="別途">別途</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>清掃代が別途の場合の料金</th>
-					<td>
-						
-						<input type="text" id="t4ai" name="t4ai" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>写真</th>
-					<td>
-						<input type="file" id="f9og" name="f9og" size="60"><br>
-						<input type="file" id="f9oe" name="f9oe" size="60"><br>
-						<input type="file" id="f5iq" name="f5iq" size="60"><br>
-						<input type="file" id="f8ss" name="f8ss" size="60"><br>
-						<input type="file" id="f4vl" name="f4vl" size="60"><br>
-						<input type="file" id="f7fh" name="f7fh" size="60"><br>
-						<input type="file" id="f1iw" name="f1iw" size="60"><br>
-						<input type="file" id="f2va" name="f2va" size="60"><br>
-						<input type="file" id="f3jx" name="f3jx" size="60"><br>
-						<input type="file" id="f6oc" name="f6oc" size="60"><br>
-						<input type="file" id="f1uw" name="f1uw" size="60"><br>
-						<input type="file" id="f6ta" name="f6ta" size="60"><br>
-						<input type="file" id="f2ab" name="f2ab" size="60"><br>
-						<input type="file" id="f7cv" name="f7cv" size="60"><br>
-						<input type="file" id="f0tv" name="f0tv" size="60">
-					</td>
-				</tr>
-				<tr>
-					<th>ホームページURL</th>
-					<td>
-						
-						<span class="aside">※すでにair bnb等に登録がある場合、ページURLを記入下さい。</span><br>
-						<input type="text" id="t6rs" name="t6rs" size="60" value="" maxlength="300"><br>
-						<span class="bside">例： http://www.example.com/</span>
-					</td>
-				</tr>
-			</tbody></table>
+        <tbody><tr>
+          <th>お名前<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t0zz" required name="t0zz" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>フリガナ<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" required id="t7pa" name="t7pa" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>料金（1泊あたり）<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t8sb" required name="t8sb" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>物件住所<em class="required">※</em></th>
+          <td>
+            <span class="lside">郵便番号</span><input type="text" required id="t5kf" name="t5kf" size="4" value="" maxlength="3"><span class="rside">-</span><input type="text" required id="t3hz" name="t3hz" size="7" value="" maxlength="4"><br>
+            <span class="lside">都道府県</span><select id="s0sx" required name="s0sx" size="1">
+              <option value="">----</option>
+              <optgroup label="北海道">
+                <option value="北海道">北海道</option>
+              </optgroup>
+              <optgroup label="東北">
+                <option value="青森県">青森県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="山形県">山形県</option>
+                <option value="福島県">福島県</option>
+              </optgroup>
+              <optgroup label="関東">
+                <option value="茨城県">茨城県</option>
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="千葉県">千葉県</option>
+                <option value="東京都">東京都</option>
+                <option value="神奈川県">神奈川県</option>
+                <option value="山梨県">山梨県</option>
+              </optgroup>
+              <optgroup label="信越">
+                <option value="長野県">長野県</option>
+                <option value="新潟県">新潟県</option>
+              </optgroup>
+              <optgroup label="北陸">
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+              </optgroup>
+              <optgroup label="東海">
+                <option value="岐阜県">岐阜県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="愛知県">愛知県</option>
+                <option value="三重県">三重県</option>
+              </optgroup>
+              <optgroup label="近畿">
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+              </optgroup>
+              <optgroup label="中国">
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+              </optgroup>
+              <optgroup label="四国">
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+              </optgroup>
+              <optgroup label="九州">
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="大分県">大分県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+              </optgroup>
+              <optgroup label="沖縄県">
+                <option value="沖縄県">沖縄県</option>
+              </optgroup>
+              <optgroup label="海外">
+                <option value="海外">海外</option>
+              </optgroup>
+            </select><br>
+            <span class="lside">市区町村</span><input type="text" required  id="t4bf" name="t4bf" size="60" value="" maxlength="300"><br>
+            <span class="lside">番地建物</span><input type="text" required id="t1yt" name="t1yt" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>電話番号<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" required id="t4my" name="t4my" size="60" value="" maxlength="300"><br>
+            <span class="bside">ハイフン不要</span>
+          </td>
+        </tr>
+        <tr>
+          <th>メールアドレス<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t0qm" required name="t0qm" size="60" value="" maxlength="300"><br>
+            <span class="bside">例： info@example.com</span>
+          </td>
+        </tr>
+        <tr>
+          <th>携帯番号<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t4cf" required name="t4cf" size="60" value=""  oninput="maxLengthCheck11(this)" maxlength="11"><br>
+            <span class="bside">例： 09011112222 (ハイフン不要)</span>
+          </td>
+        </tr>
+        <tr>
+          <th>物件タイプ<em class="required">※</em></th>
+          <td>
+            
+            <span id="c6ux" class="checkbox">
+              <label for="c6ux0"><input type="checkbox" id="c6ux0" name="c6ux[]" value="□まるまる貸切">□まるまる貸切</label>
+              <label for="c6ux1"><input type="checkbox" id="c6ux1" name="c6ux[]" value="・戸建">・戸建</label>
+              <label for="c6ux2"><input type="checkbox" id="c6ux2" name="c6ux[]" value="・マンション">・マンション</label>
+              <label for="c6ux3"><input type="checkbox" id="c6ux3" name="c6ux[]" value="・アパート">・アパート</label>
+              <label for="c6ux4"><input type="checkbox" id="c6ux4" name="c6ux[]" value="□シェアルーム">□シェアルーム</label>
+              <label for="c6ux5"><input type="checkbox" id="c6ux5" name="c6ux[]" value="・洋室">・洋室</label>
+              <label for="c6ux6"><input type="checkbox" id="c6ux6" name="c6ux[]" value="・和室">・和室</label>
+              <label for="c6ux7"><input type="checkbox" id="c6ux7" name="c6ux[]" value="□個室（ホスト同居）">□個室（ホスト同居）</label>
+              <label for="c6ux8"><input type="checkbox" id="c6ux8" name="c6ux[]" value="・洋室">・洋室</label>
+              <label for="c6ux9"><input type="checkbox" id="c6ux9" name="c6ux[]" value="・和室">・和室</label>
+              <label for="c6ux10"><input type="checkbox" id="c6ux10" name="c6ux[]" value="□個室（ホスト別居）">□個室（ホスト別居）</label>
+              <label for="c6ux11"><input type="checkbox" id="c6ux11" name="c6ux[]" value="・洋室">・洋室</label>
+              <label for="c6ux12"><input type="checkbox" id="c6ux12" name="c6ux[]" value="・和室">・和室</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>ベットタイプ<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7jj" class="checkbox">
+              <label for="c7jj0"><input type="checkbox" id="c7jj0" name="c7jj[]" value="ベット">ベット</label>
+              <label for="c7jj1"><input type="checkbox" id="c7jj1" name="c7jj[]" value="和式布団">和式布団</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>宿泊可能人数<em class="required">※</em></th>
+          <td>
+            
+            <span id="c2aw" class="checkbox">
+              <label for="c2aw0"><input type="checkbox" id="c2aw0" name="c2aw[]" value="1人">1人</label>
+              <label for="c2aw1"><input type="checkbox" id="c2aw1" name="c2aw[]" value="2人">2人</label>
+              <label for="c2aw2"><input type="checkbox" id="c2aw2" name="c2aw[]" value="3人">3人</label>
+              <label for="c2aw3"><input type="checkbox" id="c2aw3" name="c2aw[]" value="4人">4人</label>
+              <label for="c2aw4"><input type="checkbox" id="c2aw4" name="c2aw[]" value="5人">5人</label>
+              <label for="c2aw5"><input type="checkbox" id="c2aw5" name="c2aw[]" value="6人">6人</label>
+              <label for="c2aw6"><input type="checkbox" id="c2aw6" name="c2aw[]" value="7人">7人</label>
+              <label for="c2aw7"><input type="checkbox" id="c2aw7" name="c2aw[]" value="8人">8人</label>
+              <label for="c2aw8"><input type="checkbox" id="c2aw8" name="c2aw[]" value="9人">9人</label>
+              <label for="c2aw9"><input type="checkbox" id="c2aw9" name="c2aw[]" value="10人">10人</label>
+              <label for="c2aw10"><input type="checkbox" id="c2aw10" name="c2aw[]" value="10人～">10人～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>バスルーム<em class="required">※</em></th>
+          <td>
+            
+            <span id="c2cp" class="checkbox">
+              <label for="c2cp0"><input type="checkbox" id="c2cp0" name="c2cp[]" value="1">1</label>
+              <label for="c2cp1"><input type="checkbox" id="c2cp1" name="c2cp[]" value="2">2</label>
+              <label for="c2cp2"><input type="checkbox" id="c2cp2" name="c2cp[]" value="3">3</label>
+              <label for="c2cp3"><input type="checkbox" id="c2cp3" name="c2cp[]" value="4">4</label>
+              <label for="c2cp4"><input type="checkbox" id="c2cp4" name="c2cp[]" value="5">5</label>
+              <label for="c2cp5"><input type="checkbox" id="c2cp5" name="c2cp[]" value="5～">5～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>ベット数<em class="required">※</em></th>
+          <td>
+            
+            <span id="c1in" class="checkbox">
+              <label for="c1in0"><input type="checkbox" id="c1in0" name="c1in[]" value="1">1</label>
+              <label for="c1in1"><input type="checkbox" id="c1in1" name="c1in[]" value="2">2</label>
+              <label for="c1in2"><input type="checkbox" id="c1in2" name="c1in[]" value="3">3</label>
+              <label for="c1in3"><input type="checkbox" id="c1in3" name="c1in[]" value="4">4</label>
+              <label for="c1in4"><input type="checkbox" id="c1in4" name="c1in[]" value="5">5</label>
+              <label for="c1in5"><input type="checkbox" id="c1in5" name="c1in[]" value="6">6</label>
+              <label for="c1in6"><input type="checkbox" id="c1in6" name="c1in[]" value="7">7</label>
+              <label for="c1in7"><input type="checkbox" id="c1in7" name="c1in[]" value="8">8</label>
+              <label for="c1in8"><input type="checkbox" id="c1in8" name="c1in[]" value="9">9</label>
+              <label for="c1in9"><input type="checkbox" id="c1in9" name="c1in[]" value="10">10</label>
+              <label for="c1in10"><input type="checkbox" id="c1in10" name="c1in[]" value="10～">10～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>アメニティ<em class="required">※</em></th>
+          <td>
+            
+            <span id="c9qd" class="checkbox">
+              <label for="c9qd0"><input type="checkbox" id="c9qd0" name="c9qd[]" value="フェイスタオル">フェイスタオル</label>
+              <label for="c9qd1"><input type="checkbox" id="c9qd1" name="c9qd[]" value="ボディータオル">ボディータオル</label>
+              <label for="c9qd2"><input type="checkbox" id="c9qd2" name="c9qd[]" value="シャンプー／ボディーソープ">シャンプー／ボディーソープ</label>
+              <label for="c9qd3"><input type="checkbox" id="c9qd3" name="c9qd[]" value="食器">食器</label>
+              <label for="c9qd4"><input type="checkbox" id="c9qd4" name="c9qd[]" value="朝食">朝食</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>設備<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7vj" class="checkbox">
+              <label for="c7vj0"><input type="checkbox" id="c7vj0" name="c7vj[]" value="テレビ">テレビ</label>
+              <label for="c7vj1"><input type="checkbox" id="c7vj1" name="c7vj[]" value="インターネット">インターネット</label>
+              <label for="c7vj2"><input type="checkbox" id="c7vj2" name="c7vj[]" value="WIFI">WIFI</label>
+              <label for="c7vj3"><input type="checkbox" id="c7vj3" name="c7vj[]" value="エアコン">エアコン</label>
+              <label for="c7vj4"><input type="checkbox" id="c7vj4" name="c7vj[]" value="暖房">暖房</label>
+              <label for="c7vj5"><input type="checkbox" id="c7vj5" name="c7vj[]" value="洗濯機">洗濯機</label>
+              <label for="c7vj6"><input type="checkbox" id="c7vj6" name="c7vj[]" value="乾燥機">乾燥機</label>
+              <label for="c7vj7"><input type="checkbox" id="c7vj7" name="c7vj[]" value="キッチン">キッチン</label>
+              <label for="c7vj8"><input type="checkbox" id="c7vj8" name="c7vj[]" value="電子レンジ">電子レンジ</label>
+              <label for="c7vj9"><input type="checkbox" id="c7vj9" name="c7vj[]" value="オーブン">オーブン</label>
+              <label for="c7vj10"><input type="checkbox" id="c7vj10" name="c7vj[]" value="トースター">トースター</label>
+              <label for="c7vj11"><input type="checkbox" id="c7vj11" name="c7vj[]" value="無料駐車場">無料駐車場</label>
+              <label for="c7vj12"><input type="checkbox" id="c7vj12" name="c7vj[]" value="プール">プール</label>
+              <label for="c7vj13"><input type="checkbox" id="c7vj13" name="c7vj[]" value="ジム">ジム</label>
+              <label for="c7vj14"><input type="checkbox" id="c7vj14" name="c7vj[]" value="ヘアドライヤー">ヘアドライヤー</label>
+              <label for="c7vj15"><input type="checkbox" id="c7vj15" name="c7vj[]" value="アイロン">アイロン</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>その他<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7bz" class="checkbox">
+              <label for="c7bz0"><input type="checkbox" id="c7bz0" name="c7bz[]" value="ペット可能">ペット可能</label>
+              <label for="c7bz1"><input type="checkbox" id="c7bz1" name="c7bz[]" value="ファミリー／子供可能">ファミリー／子供可能</label>
+              <label for="c7bz2"><input type="checkbox" id="c7bz2" name="c7bz[]" value="喫煙可能">喫煙可能</label>
+              <label for="c7bz3"><input type="checkbox" id="c7bz3" name="c7bz[]" value="車椅子">車椅子</label>
+              <label for="c7bz4"><input type="checkbox" id="c7bz4" name="c7bz[]" value="24時間チェックイン可能">24時間チェックイン可能</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>最低泊数<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" required id="t0mc" name="t0mc" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>チェックイン<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" required id="t8vp" name="t8vp" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>チェックアウト<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" required id="t9ju" name="t9ju" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>清掃代<em class="required">※</em></th>
+          <td>
+            
+            <span id="c1jz" class="checkbox">
+              <label for="c1jz0"><input type="checkbox" id="c1jz0" name="c1jz[]" value="含む">含む</label>
+              <label for="c1jz1"><input type="checkbox" id="c1jz1" name="c1jz[]" value="別途">別途</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>清掃代が別途の場合の料金</th>
+          <td>
+            
+            <input type="text" id="t4ai" name="t4ai" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>写真</th>
+          <td>
+            <input type="file" id="f9og" name="f9og" size="60"><br>
+            <input type="file" id="f9oe" name="f9oe" size="60"><br>
+            <input type="file" id="f5iq" name="f5iq" size="60"><br>
+            <input type="file" id="f8ss" name="f8ss" size="60"><br>
+            <input type="file" id="f4vl" name="f4vl" size="60"><br>
+            <input type="file" id="f7fh" name="f7fh" size="60"><br>
+            <input type="file" id="f1iw" name="f1iw" size="60"><br>
+            <input type="file" id="f2va" name="f2va" size="60"><br>
+            <input type="file" id="f3jx" name="f3jx" size="60"><br>
+            <input type="file" id="f6oc" name="f6oc" size="60"><br>
+            <input type="file" id="f1uw" name="f1uw" size="60"><br>
+            <input type="file" id="f6ta" name="f6ta" size="60"><br>
+            <input type="file" id="f2ab" name="f2ab" size="60"><br>
+            <input type="file" id="f7cv" name="f7cv" size="60"><br>
+            <input type="file" id="f0tv" name="f0tv" size="60">
+          </td>
+        </tr>
+        <tr>
+          <th>ホームページURL</th>
+          <td>
+            
+            <span class="aside">※すでにair bnb等に登録がある場合、ページURLを記入下さい。</span><br>
+            <input type="text" id="t6rs" name="t6rs" size="60" value="" maxlength="300"><br>
+            <span class="bside">例： http://www.example.com/</span>
+          </td>
+        </tr>
+      </tbody></table>
                               <p class="submit_bt_wrap">
                                 <input type="reset" value="やり直す"><input type="submit" value="確認画面へ">
                               </p>
@@ -855,38 +852,38 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?>
 <p style="margin:0">
 <script type="text/javascript">
 $(window).ready( function() {
-	$("#t3gq_guest").jpostal({
-		postcode : [
-			"#t3gq_guest",
-			"#t0sz_guest"
-		],
-		address : {
-			"#s5bo_guest"  : "%3",
-			"#t4ii_guest"  : "%4",
-			"#t0pi_guest"  : "%5",
+  $("#t3gq_guest").jpostal({
+    postcode : [
+      "#t3gq_guest",
+      "#t0sz_guest"
+    ],
+    address : {
+      "#s5bo_guest"  : "%3",
+      "#t4ii_guest"  : "%4",
+      "#t0pi_guest"  : "%5",
 '#address1_kana'  : '%8',
-			'#address2_kana'  : '%9',
-			'#address3_kana'  : '%10'
-		}
-	});
+      '#address2_kana'  : '%9',
+      '#address3_kana'  : '%10'
+    }
+  });
 });
 </script>
 <script type="text/javascript">
-	$(window).ready( function() {
-	$("#t5kf").jpostal({
-		postcode : [
-			"#t5kf",
-			"#t3hz"
-		],
-		address : {
-			"#s0sx"  : "%3",
-			"#t4bf"  : "%4",
-			"#t1yt"  : "%5",
+  $(window).ready( function() {
+  $("#t5kf").jpostal({
+    postcode : [
+      "#t5kf",
+      "#t3hz"
+    ],
+    address : {
+      "#s0sx"  : "%3",
+      "#t4bf"  : "%4",
+      "#t1yt"  : "%5",
 '#address1_kana'  : '%8',
-			'#address2_kana'  : '%9',
-			'#address3_kana'  : '%10'
-		}
-	});
+      '#address2_kana'  : '%9',
+      '#address3_kana'  : '%10'
+    }
+  });
 });
 </script>
 </p>
