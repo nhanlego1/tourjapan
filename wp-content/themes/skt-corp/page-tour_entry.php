@@ -73,12 +73,49 @@
                           </div>
                               
  <?php 
-if (isset($_GET['amount']) and $_GET['amount']!=''){
+if (isset($_GET['amount']) and $_GET['amount']!=''):?>
+<?php
     $data_get = array('status' => 'yes',
         'money_amount'=>intval($_GET['amount']));
      global  $wpdb;
-    $wpdb->update( 'tour_reg', $data_get,  array( 'id' => intval($_GET['order_id'] ) ));
-}?>
+    $wpdb->update( 'tour_reg', $data_get,  array( 'id' => intval($_GET['order_id'] ) ));?>
+
+<section id="contact">
+      <div class="container">
+       <div class="row">
+          <div class="col-lg-12 col-md-12"> 
+            <div class="title_area">
+              <h2 class="title_two">通訳ガイド（ホスト）として登録される皆様へ</h2>
+              <span></span><br><br>
+              <div class="title_three"><p2>【 ご登録に際してのご注意 】<br>本サイトに登録後、実際に依頼者（ゲスト）とマッチングが成立し、<br>実際にご自分がお住まいの街や故郷を案内する際、国家資格である通訳案内士の資格を持たず<br>地域や日本国の「文化・地理・歴史・政治・宗教」を自らの知識・知見に基づいて説明・案内を<br>すると通訳案内業法、旅行業法に基づき罰せられます。<br><br>通訳案内士の資格を保有しないホストは、案内に際して<br>「文化・地理・歴史・政治・宗教」について説明・案内しないようご注意下さい。</p2><br></div><br>
+                                      <p>通訳ガイドの登録を希望する方は下記、フォームから登録が可能です。<br>
+                                      </p><p>日本語の他、通訳可能な言語でのご入力をお願いいたします。<br><br>
+                                     <p2>年齢及び携帯番号、住所はサイト表示されません。マッチング成立後、ゲストに直接送信されます。</p2>
+        <br>
+        <br>
+
+          <div id="mainform">
+  <h2><a href="http://serve-inc.kir.jp/">ホストになる（通訳ガイド）エントリーフォーム</a></h2>
+  <p class="step"><span>1. フォームの入力</span> → <span>2. 入力内容の確認</span> → <em>3. 送信完了</em></p>
+  <div>
+    <ul>
+      <li>メールを送信しました。</li>
+      <li>返信されるまで、しばらくお待ち下さい。</li>
+      <li>1週間後の12月24日（土曜日）になっても返信されない場合は届いていない可能性がありますので、再度送信して下さい。</li>
+    </ul>
+  </div>
+</div>
+  <p class="back">
+    <a href="#" onclick="history.back();return false;">←前へ戻る</a>
+    <a href="#">↑ページの先頭へ</a>
+  </p>
+</div>
+           </p></div>
+          </div>
+       </div>
+       </div>
+    </section>
+<?php endif; ?>
    <?php  if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes'): ?>
 <?php
        
@@ -171,7 +208,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
       $('#amount').change(function(){
         var order_id=$("#order_id").val();
         var amount=$(this).val();
-        $("#return").val('<?php echo esc_url(home_url('/'));?>thankyou_tour?order_id='+ order_id+ '&amount='+amount)
+        $("#return").val('<?php echo esc_url(home_url('/'));?>tour_entry?order_id='+ order_id+ '&amount='+amount)
       });
   </script>
     <!-- <input type="hidden" name="option_select0" value="Monthly Membership">
@@ -393,7 +430,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
         </fieldset>
     </form>
 <?php endif;?>
- <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3'])):?>                         
+ <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3']) && !isset($_GET['amount'])):?>                         
 <form accept-charset="utf-8" action="<?php echo esc_url(home_url('/'));?>tour_entry/" enctype="multipart/form-data" method="post"><input name="to_step_2" type="hidden" value="yes" />
 <fieldset>
 </br>
