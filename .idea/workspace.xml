@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/comment-template.php" afterPath="$PROJECT_DIR$/wp-includes/comment-template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
     </list>
     <ignored path="tourjapan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,21 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="199" column="47" selection-start-line="199" selection-start-column="47" selection-end-line="199" selection-end-column="47" />
+            <state relative-caret-position="168">
+              <caret line="199" column="38" selection-start-line="199" selection-start-column="38" selection-end-line="199" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment-template.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="comment-template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="1293" column="4" selection-start-line="1293" selection-start-column="4" selection-end-line="1294" selection-end-column="15" />
+            <state relative-caret-position="116">
+              <caret line="2124" column="84" selection-start-line="2124" selection-start-column="72" selection-end-line="2124" selection-end-column="84" />
               <folding>
                 <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
               </folding>
@@ -75,6 +75,7 @@
       <list>
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php" />
         <option value="$PROJECT_DIR$/wp-includes/comment-template.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
       </list>
     </option>
   </component>
@@ -250,12 +251,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487949456620</updated>
-      <workItem from="1487949458023" duration="1412000" />
+      <workItem from="1487949458023" duration="1543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1412000" />
+    <option name="totallyTimeSpent" value="1543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -304,6 +305,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="2124" column="84" selection-start-line="2124" selection-start-column="72" selection-end-line="2124" selection-end-column="84" />
+          <folding>
+            <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -314,19 +325,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="199" column="47" selection-start-line="199" selection-start-column="47" selection-end-line="199" selection-end-column="47" />
+        <state relative-caret-position="168">
+          <caret line="199" column="38" selection-start-line="199" selection-start-column="38" selection-end-line="199" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="1293" column="4" selection-start-line="1293" selection-start-column="4" selection-end-line="1294" selection-end-column="15" />
-          <folding>
-            <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
