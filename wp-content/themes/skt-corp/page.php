@@ -202,7 +202,17 @@ get_header(); ?>
                         </div>
             </div>
        <?php } else { ?>
-      
+         <div class="header1" style="height:328px;background:url(<?php echo esc_url(home_url('/'));?>img/bg-2.jpg);background-size: cover;">
+	<div class="title-top"> 
+    <h2><?php if( $post_slug=='question'):?>Q & A<?php else: ?> <?php echo $post_slug;?> <?php endif;?>
+</h2>
+  </div>
+</div>
+<div>
+<div class='container' style="">
+<div class='row'>
+<div class="col-md-7 col-xs-12 left-content">
+              <p></p>     
 				<?php while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part( 'content', 'page' ); ?>
 					<?php
@@ -213,9 +223,12 @@ get_header(); ?>
                 <?php endwhile; // end of the loop. ?>
             <!-- blog-post -->
        
-        <?php }
-         get_sidebar();?>
-        <div class="clear"></div>
+        <?php }?>
+        </div>
+        <?php get_sidebar();?>
+                </div>
+                </div>
+                </div>
     
 
 	

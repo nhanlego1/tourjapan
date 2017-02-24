@@ -30,7 +30,7 @@ get_header();
                   <h1><b><?=get_the_title($post->ID)?></b></h1>
                     <?php if(in_category('hostlist')):?>
                   <span class="singlecourse_author">
-                 <img alt="img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>">東京・埼玉・神奈川</span><span class="singlecourse_price">￥<?php echo get_post_meta($post->ID, 'price', TRUE); ?>／時間
+                 <img alt="img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>">東京・埼玉・神奈川 <a href="<?php echo esc_url(home_url('/'));?>list_qa" class="question">Q&amp;A</a></span><span class="singlecourse_price">￥<?php echo get_post_meta($post->ID, 'price', TRUE); ?>／時間
                   </span>
                   <?php else:?>
                    <span class="singlecourse_author">
