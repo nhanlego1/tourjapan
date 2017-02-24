@@ -137,7 +137,7 @@ function wps_theme_func(){
 					  .$file2.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
-					 .'<a href="?page=theme-options&order_host_id='.$row->id.'">Xóa</a></td><tr>';
+					 .'<a href="?page=theme-options&order_host_id='.$row->id.'">Delete</a></td><tr>';
 				}
 				echo '</table>';
 // each column in your row will be accessible like this
@@ -232,7 +232,7 @@ function wps_theme_func_settings(){
 					  .$file.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
-					 .'<a href="?page=tour-orders&order_tour_id='.$row->id.'">Xóa</a></td><tr>';
+					 .'<a href="?page=tour-orders&order_tour_id='.$row->id.'">Delete</a></td><tr>';
 				}
 				echo '</table>';
 }
@@ -337,7 +337,7 @@ function wps_theme_func_faq(){
 					 .$file.'</td><td>'
 					 .$row->status.'</td><td style="text-align:right">'
 					 .$row->money_amount.'</td><td>'
-					 .'<a href="?page=house-orders&order_house_id='.$row->id.'">Xóa</a></td><tr>';
+					 .'<a href="?page=house-orders&order_house_id='.$row->id.'">Delete</a></td><tr>';
 				}
 				echo '</table>';
 }
@@ -576,9 +576,9 @@ function tao_taxonomys() {
         /* Biến $label chứa các tham số thiết lập tên hiển thị của Taxonomy
          */
         $labels = array(
-                'name' => 'テーマ& カテゴリー',
-                'singular' => 'テーマ& カテゴリー',
-                'menu_name' => 'テーマ& カテゴリー'
+                'name' => 'テーマ& カテゴリー (Tour)',
+                'singular' => 'テーマ& カテゴリー (Tour)',
+                'menu_name' => 'テーマ& カテゴリー (Tour)'
         );
  
         /* Biến $args khai báo các tham số trong custom taxonomy cần tạo
@@ -608,9 +608,9 @@ function tao_taxonomy() {
         /* Biến $label chứa các tham số thiết lập tên hiển thị của Taxonomy
          */
         $labels = array(
-                'name' => ' 通訳言語',
-                'singular' => ' 通訳言語',
-                'menu_name' => ' 通訳言語'
+                'name' => ' 通訳言語 (Tour)',
+                'singular' => ' 通訳言語 (Tour)',
+                'menu_name' => ' 通訳言語 (Tour)'
         );
  
         /* Biến $args khai báo các tham số trong custom taxonomy cần tạo
@@ -1055,7 +1055,7 @@ function SearchHost(){
      $wp_query->the_post();
          $count++; ?>
           <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="host-avatar"><a href="../host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
                                   
                                   <?php the_content(); ?>

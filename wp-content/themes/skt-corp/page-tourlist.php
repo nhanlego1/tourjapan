@@ -153,7 +153,7 @@ $f3=$_GET['language'];
                                         <strong><i class="fa fa-usd" aria-hidden="true"></i>  <?php echo get_post_meta(get_the_ID(), 'price', TRUE); ?></strong>
                                     </div>
                                     <div class="col-xs-6 text-right">
-                                        <button class="btn my-btn"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span>  ツアー詳細  </button>
+                                       <a href="<?php echo get_permalink( get_the_ID() ); ?>"><button class="btn my-btn"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> ツアー詳細 </button></a>
                                     </div>
                                 </div>
                             </div>

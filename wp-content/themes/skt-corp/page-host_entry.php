@@ -9,19 +9,32 @@
       <div class='row'> 
         <div class="col-md-8  col-md-offset-2 col-xs-12  row step">
             <ul class="progress-indicator">
-                <li class="completed">
+               <?php 
+              $step = 1;
+              if(isset($_POST['to_step_2']) and $_POST['to_step_2']=='yes'){
+              	$step = 2;
+              }
+              if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes'){
+              	$step = 3;
+              }
+              if (isset($_GET['amount']) and $_GET['amount']!=''){
+              	$step = 4;
+              }
+              
+              ?>
+                <li class="<?php if($step>=1):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">1</span></span>
                     <span class="title-step">Form of input</span> 
                 </li>
-                <li class="completed">
+                <li class="<?php if($step>=2):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">2</span></span>
                     <span class="title-step">Confirmation of input content</span> 
                 </li>
-                <li class="completed">
+                <li class="<?php if($step>=3):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">3</span></span>
                     <span class="title-step">Transmission completion</span> 
                 </li>
-                <li class="completed">
+                <li class="<?php if($step>=4):?>completed<?php endif;?>">
                     <span class="bubble bubble-last"><span class="num-step num-step-last">4</span></span>
                     <span class="title-step">Completion</span> 
                 </li>
@@ -178,15 +191,29 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
        $wpdb->insert('host_reg', $data_post);
        $lastInsertId = $wpdb->insert_id; 
        ?>
-    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="congnn@bkindex.com">
-    <input type="hidden" name="lc" value="US">
-    <input type="hidden" name="item_name" value="By Tour">
-    <input type="hidden" name="button_subtype" value="services">
-    <input type="hidden" name="no_note" value="0">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+   <?php 
+       $args = array(
+       		'category_name' => 'config-paypal',
+       		'orderby'=>'date',
+       		'order'=>'DESC',
+       		'posts_per_page' => 1,
+       );
+       $wp_query = new WP_Query();
+       $wp_query->query( $args );
+       while ($wp_query->have_posts()):
+       $wp_query->the_post();
+       	
+       ?>
+	    <form action="<?php echo get_post_meta(get_the_ID(), 'action', TRUE); ?>" method="post" target="_top">
+	    <input type="hidden" name="cmd" value="<?php echo get_post_meta(get_the_ID(), 'cmd', TRUE); ?>">
+	    <input type="hidden" name="business" value="<?php echo get_post_meta(get_the_ID(), 'business', TRUE); ?>">
+	    <input type="hidden" name="lc" value="<?php echo get_post_meta(get_the_ID(), 'lc', TRUE); ?>">
+	    <input type="hidden" name="item_name" value="By Host">
+	    <input type="hidden" name="button_subtype" value="<?php echo get_post_meta(get_the_ID(), 'button_subtype', TRUE); ?>">
+	    <input type="hidden" name="no_note" value="<?php echo get_post_meta(get_the_ID(), 'no_note', TRUE); ?>">
+	    <input type="hidden" name="currency_code" value="<?php echo get_post_meta(get_the_ID(), 'currency_code', TRUE); ?>">
+	    <input type="hidden" name="bn" value="<?php echo get_post_meta(get_the_ID(), 'bn', TRUE); ?>">
+    <?php endwhile;?>
     <table>
         <tr>
             <td colspan="2" style="text-align:center;">
@@ -762,7 +789,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                                         <option value="海外">海外</option>
                                       </optgroup>
                                     </select><br>
-                                    <select id="s4nx" name="s4nx" size="1" required>
+                                    <select id="s4nx" name="s4nx" size="1" >
                                       <option value="">----</option>
                                       <optgroup label="北海道">
                                         <option value="北海道">北海道</option>
@@ -837,7 +864,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                                         <option value="海外">海外</option>
                                       </optgroup>
                                     </select><br>
-                                    <select id="s9pl" name="s9pl" size="1" required>
+                                    <select id="s9pl" name="s9pl" size="1" >
                                       <option value="">----</option>
                                       <optgroup label="北海道">
                                         <option value="北海道">北海道</option>
@@ -912,7 +939,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                                         <option value="海外">海外</option>
                                       </optgroup>
                                     </select><br>
-                                    <select id="s6rf" name="s6rf" size="1" required>
+                                    <select id="s6rf" name="s6rf" size="1" >
                                       <option value="">----</option>
                                       <optgroup label="北海道">
                                         <option value="北海道">北海道</option>
@@ -987,7 +1014,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                                         <option value="海外">海外</option>
                                       </optgroup>
                                     </select><br>
-                                    <select id="s9oi" name="s9oi" size="1" required>
+                                    <select id="s9oi" name="s9oi" size="1" >
                                       <option value="">----</option>
                                       <optgroup label="北海道">
                                         <option value="北海道">北海道</option>
@@ -1088,7 +1115,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
 <tr>
           <th>お勧めスポット①<em class="required">※</em></th>
           <td>
-            <input type="file" id="f6et" name="f6et" size="60"><br><span class="aside">スポット名①</span><br><input type="text" id="t8kg" name="t8kg" size="60" value="" maxlength="300"><br> 
+            <input type="file" id="f6et" name="f6et" size="60" required><br><span class="aside">スポット名①</span><br><input type="text" id="t8kg" required name="t8kg" size="60" value="" maxlength="300"><br> 
       
       <input type="file" id="f6rs" name="f6rs" size="60"><br><span class="aside">スポット名②</span><br><input type="text" id="t5ue" name="t5ue" size="60" value="" maxlength="300"><br>
       
@@ -1099,7 +1126,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
           <th>お勧めグルメ<em class="required">※</em></th>
           <td>
             <span class="aside">例）○○屋の○○ラーメン、○○店の○○丼、等</span><br>
-      <input type="file" id="f5ue" name="f5ue" size="60" ><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t4gt" name="t4gt" size="60" value="" maxlength="300"><br>
+      <input type="file" id="f5ue" name="f5ue" size="60" required ><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t4gt" name="t4gt" required size="60" value="" maxlength="300"><br>
             <input type="file"  id="f5vi" name="f5vi" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t0zf" name="t0zf" size="60" value="" maxlength="300"><br>
             <input type="file"  id="f9gp" name="f9gp" size="60"><br><span class="aside">例）お勧めグルメ名／○○屋の○○ラーメン、○○店の○○丼、等</span><br><input type="text"  id="t8ia" name="t8ia" size="60" value="" maxlength="300">
           </td>

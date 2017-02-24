@@ -252,7 +252,7 @@ get_header();
              <?php endif ?>
           <?php if ($count >=1 && $count <5):?>	
                             <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
                                   
                                   <?php the_content(); ?>
@@ -266,7 +266,7 @@ get_header();
 						<?php endif ?>
           		<?php if ($count>=5 && $count<=8):?>	
           			<div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
                                   
                                   <?php the_content(); ?>
@@ -289,7 +289,7 @@ get_header();
 
 <div class="host row newTour">
 <div class="our-service">
-<p class="service">New tour activity infomation<span class="lines"></span></p>
+<p class="service">NEWツアー/アクティビティーのご紹介<span class="lines"></span></p>
 <p></p></div>
 <div class="container list-host">
 <div id="newTour" class="carousel slide" data-ride="carousel">
@@ -315,7 +315,7 @@ get_header();
              <?php endif ?>
           <?php if ($count >=1 && $count <4):?>	
                             <div class="col-xs-12 col-sm-6 col-md-4">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a>
                                 </div>
                                   <p class="host-name"><?php the_title(); ?></p>
                                   <?php the_content(); ?>
@@ -329,7 +329,7 @@ get_header();
 						<?php endif ?>
           		<?php if ($count>=4 && $count<=6):?>	
           			<div class="col-xs-12 col-sm-6 col-md-4">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a>
                                 </div>
                                   <p class="host-name"><?php the_title(); ?></p>
                                   <?php the_content(); ?>
@@ -357,100 +357,86 @@ get_header();
 
 
 <div class="row testimonial">
-<div class="our-service margin-top-25">
-<p class="service">testimonial<br /><span class="lines"></span></p>
+	<div class="our-service margin-top-25">
+	<p class="service">ツアーガイド募集<br /><span class="lines"></span></p>
+	
+	</div>
+	<div class="container">
+	
+	     <?php
+    $count=0;
+    $args = array( 
+                        'category_name' => 'testimonial', 
+                        'orderby'=>'date',
+                        'order'=>'DESC', 
+                        'posts_per_page' => 4, 
+                      );
 
-</div>
-<div class="container">
-<div class="row">
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-1.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">オーストラリア</p>
 
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
+    $wp_query = new WP_Query();
+    $wp_query->query( $args );
+    while ($wp_query->have_posts()){
+     $wp_query->the_post();
+         $count++; ?>
+         <?php if($count==1):?>
 
-4月5日から8日まで京都に行きます。京都駅に迎えに来てもらい、１日案内してくれる人を探しています。電車が朝6時に着くので朝6時から夜8時ぐらいまでお願いします。私はオーストラリア人です。
-<p class="ps text-right">掲載日：○○年○○月○○日</p>
-<p class="sign text-right">募集詳細</p>
+             <div class="row">
+             <?php endif ?>
+          <?php if ($count >=1 && $count <= 2):?>	
+		            <div class="col-xs-12 col-md-6">
+						<div class="row">
+						<div class="col-xs-3"><img class="img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) )?>" /></div>
+						<div class="col-xs-9">
+						<p class="testimonial-name"><?php the_title(); ?></p>
+						<p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+						
+						<div class="hr"></div>
+						<div class="row">
+						<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
+						<div class="col-xs-10 testimonial-content">
+					     <?php the_content();?>
+						<p class="ps text-right">掲載日：<?php echo get_the_date( 'd/m/Y'); ?></p>
+						<p class="sign text-right" ><a href="<?php echo get_permalink( get_the_ID() ); ?> " style="color: #a60101;">募集詳細</a></p>
+						
+						</div>
+						</div>
+						</div>
+						</div>
+					</div>
+            <?php endif ?>
+          	<?php if ($count==2):?>	
+						</div>
+						<div class="row">
+						<?php endif ?>
+          		<?php if ($count>=3 && $count<=4):?>	
+	          			 <div class="col-xs-12 col-md-6">
+							<div class="row">
+							<div class="col-xs-3"><img class="img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) )?>" /></div>
+							<div class="col-xs-9">
+							<p class="testimonial-name"><?php the_title(); ?></p>
+							<p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+							
+							<div class="hr"></div>
+							<div class="row">
+							<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
+							<div class="col-xs-10 testimonial-content">
+						     <?php the_content();?>
+							<p class="ps text-right">掲載日：<?php echo get_the_date( 'd/m/Y');?></p>
+                            <p class="sign text-right" ><a href="<?php echo get_permalink( get_the_ID() ); ?> " style="color: #a60101;">募集詳細</a></p>
+							
+							</div>
+							</div>
+							</div>
+							</div>
+						</div>
+                      <?php endif ?>
+          			<?php if ($count==4):?>	
+						</div>
+          			<?php endif ?>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-2.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">オーストラリア</p>
-
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-4月5日から8日まで京都に行きます。京都駅に迎えに来てもらい、１日案内してくれる人を探しています。電車が朝6時に着くので朝6時から夜8時ぐらいまでお願いします。私はオーストラリア人です。
-<p class="ps text-right">掲載日：○○年○○月○○日</p>
-<p class="sign text-right">募集詳細</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-3.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">オーストラリア</p>
-
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-4月5日から8日まで京都に行きます。京都駅に迎えに来てもらい、１日案内してくれる人を探しています。電車が朝6時に着くので朝6時から夜8時ぐらいまでお願いします。私はオーストラリア人です。
-<p class="ps text-right">掲載日：○○年○○月○○日</p>
-<p class="sign text-right">募集詳細</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-4.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">オーストラリア</p>
-
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-4月5日から8日まで京都に行きます。京都駅に迎えに来てもらい、１日案内してくれる人を探しています。電車が朝6時に着くので朝6時から夜8時ぐらいまでお願いします。私はオーストラリア人です。
-<p class="ps text-right">掲載日：○○年○○月○○日</p>
-<p class="sign text-right">募集詳細</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+         
+       <?php }?>
+	</div>
 </div>
 </div>
 <?php get_footer(); ?>
