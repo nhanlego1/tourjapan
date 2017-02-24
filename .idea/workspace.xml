@@ -46,8 +46,8 @@
       <file leaf-file-name="comment-template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="2124" column="84" selection-start-line="2124" selection-start-column="72" selection-end-line="2124" selection-end-column="84" />
+            <state relative-caret-position="86">
+              <caret line="2163" column="21" selection-start-line="2163" selection-start-column="9" selection-end-line="2163" selection-end-column="21" />
               <folding>
                 <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
               </folding>
@@ -58,8 +58,8 @@
       <file leaf-file-name="page-host_details.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="80" />
+            <state relative-caret-position="133">
+              <caret line="186" column="69" selection-start-line="186" selection-start-column="69" selection-end-line="186" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -251,12 +251,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487949456620</updated>
-      <workItem from="1487949458023" duration="1666000" />
+      <workItem from="1487949458023" duration="1914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1666000" />
+    <option name="totallyTimeSpent" value="1914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -305,16 +305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="2124" column="84" selection-start-line="2124" selection-start-column="72" selection-end-line="2124" selection-end-column="84" />
-          <folding>
-            <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -323,10 +313,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="2163" column="21" selection-start-line="2163" selection-start-column="9" selection-end-line="2163" selection-end-column="21" />
+          <folding>
+            <marker date="1487952919000" expanded="true" signature="39304:39457" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="80" />
+        <state relative-caret-position="133">
+          <caret line="186" column="69" selection-start-line="186" selection-start-column="69" selection-end-line="186" selection-end-column="69" />
           <folding />
         </state>
       </provider>
