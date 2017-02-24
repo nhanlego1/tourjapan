@@ -184,7 +184,7 @@ $post_detail_id = $_GET['post-detail'];
                   </tr>
                   <tr>          
                     <td colspan="7"><b>★☆ユーザー投稿レビュー☆★</b><br><br>
-                        <?php comment_form(array(),$_GET['post-detail']); ?>
+                        <?php echo comment_form(array(),$_GET['post-detail']); ?>
                         <?php
                         // If comments are open or we have at least one comment, load up the comment template
                         if ( comments_open() || '0' != get_comments_number() )
