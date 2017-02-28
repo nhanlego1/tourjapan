@@ -22,22 +22,35 @@
               }
               
               ?>
+                <?php $args = array(
+       		'category_name' => 'config-step',
+       		'orderby'=>'date',
+       		'order'=>'DESC',
+       		'posts_per_page' => 1,
+       );
+       $wp_query = new WP_Query();
+       $wp_query->query( $args );
+       while ($wp_query->have_posts()):
+       $wp_query->the_post();
+       	
+       ?>
                 <li class="<?php if($step>=1):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">1</span></span>
-                    <span class="title-step">Form of input</span> 
+                    <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step1', TRUE); ?></span> 
                 </li>
                 <li class="<?php if($step>=2):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">2</span></span>
-                    <span class="title-step">Confirmation of input content</span> 
+                    <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step2', TRUE); ?></span> 
                 </li>
                 <li class="<?php if($step>=3):?>completed<?php endif;?>">
                     <span class="bubble"><span class="num-step">3</span></span>
-                    <span class="title-step">Transmission completion</span> 
+                    <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step3', TRUE); ?></span> 
                 </li>
                 <li class="<?php if($step>=4):?>completed<?php endif;?>">
                     <span class="bubble bubble-last"><span class="num-step num-step-last">4</span></span>
-                    <span class="title-step">Completion</span> 
+                    <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step4', TRUE); ?></span> 
                 </li>
+       <?php endwhile;?>         
             </ul>
             
          </div>

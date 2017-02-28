@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php" />
-    </list>
+    <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="" />
     <ignored path="tourjapan.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -251,12 +249,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487949456620</updated>
-      <workItem from="1487949458023" duration="1967000" />
+      <workItem from="1487949458023" duration="2133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1967000" />
+    <option name="totallyTimeSpent" value="2133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
