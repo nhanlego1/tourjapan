@@ -65,7 +65,7 @@ get_header();
             <div class="media-left"><a class="news_img" href="<?php the_permalink();?>"><?php the_post_thumbnail( 'thumbnail', array( 'class' => 'media-object' ) );?></a></div>
             <div class="media-body">
 
-            <a tabindex="0" href="blog-archive2.html"><b><?php the_title(); ?></b></a>
+            <a tabindex="0" href="<?php the_permalink();?>"><b><?php the_title(); ?></b></a>
             <p class="food_des"><?php the_excerpt();?></p>
 
             </div>
@@ -102,7 +102,7 @@ get_header();
             <div class="media">
                 <div class="media-left"><a class="news_img" href="<?php the_permalink();?>"><?php the_post_thumbnail( 'thumbnail', array( 'class' => 'media-object' ) );?></a></div>
                 <div class="media-body">
-                    <a tabindex="0" href="blog-archive2.html"><b><?php the_title(); ?></b></a>
+                    <a tabindex="0" href="<?php the_permalink();?>"><b><?php the_title(); ?></b></a>
                     <p class="food_des"><?php the_excerpt();?></p> <!-- <span class="feed_date">27.02.15</span> -->
                 </div>
             </div>
@@ -138,7 +138,7 @@ get_header();
             <div class="media">
             <div class="media-left"><a class="news_img" href="<?php the_permalink();?>"><?php the_post_thumbnail( 'thumbnail', array( 'class' => 'media-object' ) );?></a></div>
             <div class="media-body">
-                <a tabindex="0" href="blog-archive2.html"><b><?php the_title(); ?></b></a>
+                <a tabindex="0" href="<?php the_permalink();?>"><b><?php the_title(); ?></b></a>
                 <p class="food_des"><?php the_excerpt();?></p> <!-- <span class="feed_date">27.02.15</span> --></div>
             </div>
         </li>
