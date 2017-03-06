@@ -113,7 +113,7 @@ get_header();
            
         ?>
     </ul>
-    <a class="see_all" href="tourlist">ツアーリスト</a>
+     <a class="see_all" href="<?php echo esc_url(home_url('/')); ?>/category/news/">See All</a>
 
 </div>
 <!-- Start events tab content -->

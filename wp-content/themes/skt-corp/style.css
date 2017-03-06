@@ -2212,7 +2212,6 @@ height: 30px;
 #news .news_tab .media-body, .events_tab .media-body{
   padding-top: 0;
 }
-
 .row.progress{
   margin-bottom: 0px;
 }
@@ -2227,4 +2226,16 @@ padding-top:0;
 }
 body{
 overflow-x:hidden;
+}
+#commentform input#submit {
+    background: #7ab040;
+    border: none;
+    padding: 3px 10px;
+    color: #fff;
+    border-bottom: 2px #9c261a solid;
+    display: inline-block;
+    display: block;
+    padding: 10px 20px;
+    height: 39px;
+    width: 175px;
 }
