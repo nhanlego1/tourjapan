@@ -163,46 +163,25 @@ get_header();
              <!-- start related course -->
 <div class="pay"><a href="../host_entry/">Pay with PAYPAL</a></div>
              <div class="related_post">
-              <h2>ユーザーレビュー</h2>
+              <h2>USER REVIEW</h2>
           　　　　　　　　　　 　　　　　　　　　　 　　　　　　　　　　 　　　　　　　　　　 　　　　　　　　　　 　　　　　　　　　　
           <table class="table table-striped course_table">
-                <thead>
-                  <tr>          
-                    <th colspan="7">| 過去の評価</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>          
-                    <td>◎</td>
-                    <td>○</td>
-                    <td>━</td>
-                <td>△</td>
-                <td>×</td>
-                <td>休</td>
-                    <td>欠</td>
-                  </tr>
-                  <tr>          
-                    <td>5</td>
-                    <td>0</td>
-                    <td>3</td>
-                <td>1</td>
-                <td>2</td>
-                <td>1</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>          
-                    <td colspan="7"><b>★☆ユーザー投稿レビュー☆★</b><br><br>
-                    
-                                  <!--<img src="../img/revie.jpg" alt="img"> -->
+                  <thead>
+		                 
+		                </thead>
+		                <tbody>
+		                 <tr colspan="7" class="content-start"><td > <p><?= the_content($post->ID)?></p> </td></tr>
+		                  <tr>          
+		                    <td colspan="7">
+		                      <!--<img src="../img/revie.jpg" alt="img"> -->
 		                        <?php
 		                    // If comments are open or we have at least one comment, load up the comment template
 		                        if ( comments_open() || '0' != get_comments_number() )
 		                        	comments_template();
-		                        	?>
-                    
-                    </td>
-                  </tr>
-                </tbody>
+		                    ?> 
+		                    </td>
+		                  </tr>
+		                </tbody>
               </table>             
                 <div class="row">
                 </div>
@@ -235,3 +214,11 @@ get_header();
 </div>
 <?php endif;?>		
 <?php get_footer(); ?>
+<style> 
+.single_course_content .rw-rating-table {
+   display: none;
+}
+.content-start p,content-start div {
+display: none;
+}
+</style>
