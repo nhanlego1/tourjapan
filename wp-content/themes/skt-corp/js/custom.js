@@ -118,4 +118,25 @@ jQuery(document).ready(function(){
         }
         return false; // Prevent the browser jump to the link anchor
     });
+
+
+
+	//payment
+	jQuery(".pay a").click(function(){
+		jQuery(".form-paypal-adaptive").show();
+		jQuery(this).parent().hide();
+		return false;
+	});
+	jQuery(".fee_hour").blur(function(){
+		var hour = jQuery(this).val();
+		var price = jQuery(".post_price").val();
+		var priceFee = hour * price;
+		jQuery(".fee_price").val(priceFee);
+	});
+	jQuery(".fee_hour").change(function(){
+		var hour = jQuery(this).val();
+		var price = jQuery(".post_price").val();
+		var priceFee = hour * price;
+		jQuery(".fee_price").val(priceFee);
+	});
 });

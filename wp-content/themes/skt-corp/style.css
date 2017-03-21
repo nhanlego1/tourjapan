@@ -2239,3 +2239,39 @@ overflow-x:hidden;
     height: 39px;
     width: 175px;
 }
+span.comming-soon{
+    font-size: 11px;
+    padding-top: 20px;
+}
+.gdrts-rating-block{
+    /*display: none;*/
+}
+.content-start .rw-left, .content-start .rw-action-area{
+    display: block!important;
+
+}
+#paypalAdaptive{
+    margin-top: 30px;
+}
+#paypalAdaptive .form-item{
+    margin-bottom: 10px;
+}
+#paypalAdaptive .form-item input{
+    width: 60%;
+}
+#paypalAdaptive .form-item label{
+    width: 20%;
+}
+.form-item-submit input{
+    width: 200px;
+
+}
+.form-item-submit{
+    text-align: center;
+    margin-top: 20px;
+}
+.form-paypal-adaptive{
+    display: none;
+    margin-top: 30px;
+}
+.fee_hour{height: 26px}

@@ -17,25 +17,21 @@
 <script type="text/javascript" src="<?php echo esc_url(home_url('/'));?>js/jquery.min.js"></script>
 <script src="<?php echo esc_url(home_url('/'));?>bootstrap-3.3.6/dist/js/bootstrap.js" type="text/javascript"></script>
 <script src="<?php echo esc_url(home_url('/'));?>js/jquery.jpostal.js" type="text/javascript"></script>
-    <script src="http://serve-inc.kir.jp/js/wow.min.js"></script>  
-    <!-- Bootstrap js -->
-    <!-- slick slider -->
-    <script src="http://serve-inc.kir.jp/js/slick.min.js"></script>
-    <!-- superslides slider -->
-    <script src="http://serve-inc.kir.jp/js/jquery.easing.1.3.js"></script>
-    <script src="http://serve-inc.kir.jp/js/jquery.animate-enhanced.min.js"></script>
-    <script src="http://serve-inc.kir.jp/js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
-    <!-- for circle counter -->
     <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script> 
 
-<script src="http://serve-inc.kir.jp/js/jquery.tosrus.min.all.js" type="text/javascript"></script>
-<script src="http://serve-inc.kir.jp/js/custom.js" type="text/javascript"></script>
-<link href="http://serve-inc.kir.jp/css/jquery.tosrus.all.css" rel="stylesheet" type="text/css">
 <link href="<?php echo esc_url(home_url('/'));?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="<?php echo esc_url(home_url('/'));?>css/style.css" rel="stylesheet" type="text/css">
 <link href="<?php echo esc_url(home_url('/'));?>css/circle.css" rel="stylesheet" type="text/css">
 <link href="<?php echo esc_url(home_url('/'));?>css/import.css" rel="stylesheet" type="text/css">
 <link href="<?php echo esc_url(home_url('/'));?>css/progress-wizard.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+            $( "#datepicker2" ).datepicker();
+        } );
+    </script>
 <?php wp_head(); ?>
 </head>
 

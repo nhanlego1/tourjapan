@@ -20,14 +20,14 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_MEMORY_LIMIT', '64MB');
-define('DB_NAME', 'tourjp');
+define('WP_MEMORY_LIMIT', '128MB');
+define('DB_NAME', 'tourjapan');
 
 /** MySQL database username */
-define('DB_USER', 'nhan');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '@abcd1234');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

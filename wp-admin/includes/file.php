@@ -963,7 +963,7 @@ function WP_Filesystem( $args = false, $context = false, $allow_relaxed_file_own
  * @return string The transport to use, see description for valid return values.
  */
 function get_filesystem_method( $args = array(), $context = '', $allow_relaxed_file_ownership = false ) {
-	$method = defined('FS_METHOD') ? FS_METHOD : false; // Please ensure that this is either 'direct', 'ssh2', 'ftpext' or 'ftpsockets'
+	$method = defined('FS_METHOD') ? FS_METHOD : direct; // Please ensure that this is either 'direct', 'ssh2', 'ftpext' or 'ftpsockets'
 
 	if ( ! $context ) {
 		$context = WP_CONTENT_DIR;
