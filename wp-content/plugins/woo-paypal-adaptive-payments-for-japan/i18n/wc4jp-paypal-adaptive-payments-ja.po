@@ -1,0 +1,421 @@
+# Copyright (C) 2015 WooCommerce PayPal Adaptive Payments
+# This file is distributed under the same license as the WooCommerce PayPal Adaptive Payments package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce PayPal Adaptive Payments 1.1.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/woocommerce-"
+"gateway-paypal-adaptive-payments\n"
+"POT-Creation-Date: 2015-07-29 16:11:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-12-10 18:48+0900\n"
+"Last-Translator: Shohei Tanaka <shohei.t@artws.info>\n"
+"Language-Team: JAPANESE <info@artws.info>\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: includes/class-wc-paypal-adaptive-payments-admin.php:40
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:21
+msgid "PayPal Adaptive Payments"
+msgstr "ペイパルアダプティブペイメント"
+
+#: includes/class-wc-paypal-adaptive-payments-admin.php:63
+msgid "PayPal Receivers"
+msgstr "PayPal受取者"
+
+#: includes/class-wc-paypal-adaptive-payments-admin.php:66
+msgid ""
+"Enter with receivers email and commission percentage (one per line): "
+"ninja@email.com|50. Note: The total percentage may not exceed 100%."
+msgstr ""
+"報酬受取者の電子メールと手数料率（1行に1つずつ）を入力します。 ninja@email."
+"com|50. 注：合計が100％を超えることはできません。"
+
+#: includes/class-wc-paypal-adaptive-payments-admin.php:67
+msgid "ninja@email.com|50"
+msgstr ""
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:109
+msgid ""
+"PayPal Adaptive Payments lets you split payments between 2 or more "
+"recipients. <strong>BE SURE to read the <a href=\"http://ec.artws.info/"
+"documentation/\" target=\"_blank\">documentation at wc.artws.info</a> before "
+"using this payment gateway!</strong>"
+msgstr ""
+"PayPal アダプティブペイメントは２つもしくはそれ以上に分割して支払いが出来る決"
+"済方法です。<strong>詳細はご利用になる前に<a href=\"https://www.paypal.com/"
+"jp/webapps/mpp/adaptive-payments\" target=\"_blank\">こちら</a> を御覧くださ"
+"い。</strong>"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:110
+msgid ""
+"<a href=\"%s\" target=\"_blank\">PayPal web payment plus detail is here.</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">PayPalウェブペイメントプラスの詳細はこちら</"
+"a>"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:111
+msgid ""
+"If you want to use PayPal Adaptive Payment, you need PayPal business "
+"Account. For open PayPal business account is <a href=\"%s\" target=\"_blank"
+"\">here.</a>"
+msgstr ""
+"アダプティブペイメントのご利用には、ペイパルビジネスアカウントが必要です。ビ"
+"ジネスアカウントの開設は<a href=\"%s\" target=\"_blank\">こちら</a>。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:112
+msgid ""
+"PayPal Business account registration flow is <a href=\"%s\" target=\"_blank"
+"\">here.</a>"
+msgstr ""
+"ビジネスアカウントの開設手順は<a href=\"%s\" target=\"_blank\">こちら</a>をご"
+"覧ください。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:113
+msgid ""
+"<a href=\"%s\" target=\"_blank\">For submission of identification documents "
+"of PayPal business account</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">ビジネスアカウントの本人確認書類の提出につい"
+"て</a>"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:114
+msgid ""
+"The adaptive payment of use requires examination. Detail is <a href=\"%s\" "
+"target=\"_blank\">here.</a>"
+msgstr ""
+"アダプティブペイメントのご利用には審査が必要です。審査については<a href=\"%s"
+"\" target=\"_blank\">こちら</a>。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:115
+msgid ""
+"Contact<br />For inquiries about the new Application and introduction (sales "
+"representative)<br />Tel：03-6739-7135 Weekdays 9:30 - 18:00（without "
+"holiday）<br />※It takes call charges."
+msgstr ""
+"問い合わせ先<br />新規お申込み・導入に関するお問い合わせ（営業窓口）<br /"
+">Tel：03-6739-7135 平日 9:30 - 18:00（土・日・祝祭日は除く）※通話料がかかりま"
+"す"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:116
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Inquiries from the form, click here</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">フォームからのお問い合わせはこちら</a>"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:117
+msgid "If you already have a PayPal account (Customer Service)"
+msgstr "すでにペイパルアカウントをお持ちの方（カスタマーサービス）"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:118
+msgid ""
+"Tel：0120-271-888 or 03-6739-7360（for mobile phone and oversea) ※It takes "
+"call charges.）<br />9:00～20:00(7 days a week)"
+msgstr ""
+"Tel：0120-271-888 または 03-6739-7360（携帯電話と海外からはこちら ※通話料がか"
+"かります）<br />9:00～20:00（年中無休）"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:124
+msgid "Gateway Disabled"
+msgstr "決済が使えません。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:124
+msgid "PayPal does not support your store currency."
+msgstr "あなたの指定している通貨ではこの決済は使えません。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:22
+msgid "Proceed to PayPal"
+msgstr "PayPalで支払う"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:131
+msgid "Enable/Disable"
+msgstr "有効／無効"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:133
+msgid "Enable PayPal Adaptive Payments"
+msgstr "ペイパルアダプティブペイメントを有効にする"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:137
+msgid "Title"
+msgstr "タイトル"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:139
+msgid "This controls the title which the user sees during checkout."
+msgstr "これは、決済時の表示タイトルを設定できます。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:140
+msgid "PayPal"
+msgstr "PayPal"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:144
+msgid "Description"
+msgstr "説明"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:146
+msgid "This controls the description which the user sees during checkout."
+msgstr "これは、決済時の説明を設定できます。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:147
+msgid ""
+"Pay via PayPal; you can pay with your credit card if you don't have a PayPal "
+"account"
+msgstr ""
+"PayPal経由で支払います。 PayPalアカウントをお持ちでない場合は、あなたのクレ"
+"ジットカードで支払うことができます"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:150
+msgid "PayPal API Username"
+msgstr "PayPal API ユーザー名"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:152
+msgid ""
+"Please enter your PayPal API username; this is needed in order to take "
+"payment."
+msgstr ""
+"PayPalのAPIユーザー名を入力してください。これは、支払を受け取るために必要で"
+"す。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:157
+msgid "PayPal API Password"
+msgstr "PayPal API パスワード"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:159
+msgid ""
+"Please enter your PayPal API password; this is needed in order to take "
+"payment."
+msgstr ""
+"PayPal APIパスワードを入力してください。これは、支払を受け取るために必要で"
+"す。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:164
+msgid "PayPal API Signature"
+msgstr "PayPal API 署名"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:166
+msgid ""
+"Please enter your PayPal API signature; this is needed in order to take "
+"payment."
+msgstr ""
+"PayPal API署名を入力してください。これは、支払を受け取るために必要とされま"
+"す。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:171
+msgid "PayPal Application ID"
+msgstr "PayPal アプリケーションID"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:173
+msgid ""
+"Please enter your PayPal Application ID; you need create an application on "
+"PayPal."
+msgstr ""
+"あなたのPayPalのアプリケーションIDを入力してください。あなたはPayPalの上でア"
+"プリケーションを作成する必要があります。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:178
+msgid "Receiver Email"
+msgstr "受取者のメールアドレス"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:180
+msgid "Input your main receiver email for your PayPal account."
+msgstr "メインの報酬受取PayPalのメールアカウントを入力"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:186
+msgid "Payment Method"
+msgstr "決済方法"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:188
+msgid ""
+"Select the payment method: Parallel Payment - payment from a sender that is "
+"split directly among 2-6 receivers or Chained Payment - payment from a "
+"sender that is indirectly split among 1-9 secondary receivers."
+msgstr ""
+"支払方法を選択します。パラレルペイメントは2〜6名の受取者に直接分けます。ま"
+"た、チェインドペイメントは間接的に1〜9名の第二受取者に分割して支払います。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:192
+msgid "Parallel Payment"
+msgstr "パラレルペイメント"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:193
+msgid "Chained Payment"
+msgstr "チェインドペイメント"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:197
+msgid "Invoice Prefix"
+msgstr "請求番号の接頭辞"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:199
+msgid ""
+"Please enter a prefix for your invoice numbers. If you use your PayPal "
+"account for multiple stores ensure this prefix is unique as PayPal will not "
+"allow orders with the same invoice number."
+msgstr ""
+"請求書番号の接頭辞を入力してください。もし一つのPayPalアカウントで複数のサイ"
+"トから収益を得ている場合はこの接頭辞を変えることによって管理がしやすくなりま"
+"す。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:204
+msgid "Design"
+msgstr "デザイン"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:209
+msgid "Header Image (optional)"
+msgstr "ヘッダーイメージ（オプション）"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:211
+msgid ""
+"The URL of an image that displays in the header of a payment page. The URL "
+"cannot exceed 1,024 characters. The image dimensions are 90 pixels high x "
+"750 pixels wide."
+msgstr ""
+"支払ページのヘッダーに表示する画像のURL。ULRは1024文字を越えるといけません。"
+"画像の大きさは高さ90pix幅750pixとなります。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:216
+msgid "Gateway Testing"
+msgstr "決済テスト"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:221
+msgid "PayPal sandbox"
+msgstr "PayPalサンドボックス"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:223
+msgid "Enable PayPal sandbox"
+msgstr "PayPalサンドボックスを有効にする"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:225
+msgid ""
+"PayPal sandbox can be used to test payments. Sign up for a developer account "
+"<a href=\"%s\">here</a>."
+msgstr ""
+"テスト決済にPayPalサンドボックスは使います。サインアップして開発アカウントで"
+"<a href=\"%s\">ここ</a>に入ります。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:228
+msgid "Debug Log"
+msgstr "デバッグログ"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:230
+msgid "Enable logging"
+msgstr "ログの取得を有効"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:269
+msgid ""
+"PayPal is a convenient [digital wallet] on the Internet. If you register "
+"your credit card information to PayPal, settlement completion only in ID and "
+"password. Without informing the important card information in the shop, you "
+"can pay more safely. Establishment of PayPal account, is easy because only "
+"to enter the necessary information to select the PayPal in settlement method."
+msgstr ""
+"ペイパルは、インターネット上の便利な【デジタルおさいふ】です。ペイパルにクレ"
+"ジットカード情報を登録しておけば、IDとパスワードだけで決済完了。お店に大切な"
+"カード情報を知らせることなく、より安全に支払いができます。ペイパルアカウント"
+"の開設は、決済方法でPayPalを選択して必要事項を入力するだけなのでかんたんで"
+"す。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:420
+msgid ""
+"An error has occurred while processing your payment, please try again. Or "
+"contact us for assistance."
+msgstr ""
+"決済処理中にエラーが発生しました。再度試してみてください。もしくはお問い合わ"
+"せください。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:480
+msgid "Your order has expired, please %s to try again."
+msgstr "ご注文の有効期限が切れて、%sを再試行してください。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:480
+msgid "click here"
+msgstr "ここをクリック"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:483
+msgid "PayPal Adaptive Payments error: %s"
+msgstr "PayPal アダプティブ支払エラー: %s"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:588
+msgid "Payment canceled via IPN."
+msgstr "IPN経由で支払をキャンセル"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:592
+msgid ""
+"The payment request was received. Funds will be transferred once the payment "
+"is approved."
+msgstr "支払い要求を受信しました。支払いが承認されれば資金は転送されます。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:608
+msgid "The payment was successful."
+msgstr "支払は成功しました。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:613
+msgid ""
+"Some transfers succeeded and some failed for a parallel payment or, for a "
+"delayed chained payment, secondary receivers have not been paid."
+msgstr ""
+"いくつかの転送が成功し、いくつかの遅延の連鎖支払いのために、二次受信機が支払"
+"われていない、並列支払いのために失敗しましたか。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:617
+msgid ""
+"The payment failed and all attempted transfers failed or all completed "
+"transfers were successfully reversed."
+msgstr ""
+"支払いに失敗し全てを初期に戻したか、全ての完了した支払いが正常に払い戻されま"
+"した。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:621
+msgid "One or more transfers failed when attempting to reverse a payment."
+msgstr "支払いの払い戻しをした際にひとつもしくは幾つかを支払いに失敗しました。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:625
+msgid "The payment is in progress."
+msgstr "支払いが進行中です。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:629
+msgid "The payment is awaiting processing."
+msgstr "お支払いは、処理を待っています。"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:661
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:670
+msgid "PayPal Adaptive Payments Disabled"
+msgstr "PayPalアダプティブ支払いを無効にする"
+
+#: includes/class-wc-paypal-adaptive-payments-gateway.php:661
+msgid ""
+"You must fill the API Username, API Password, API Signature, Application ID "
+"and Receiver Email options."
+msgstr ""
+"APIユーザー名、APIパスワード、API署名、アプリケーションIDと受信メールのオプ"
+"ションを入力する必要があります。"
+
+#: woocommerce-gateway-paypal-adaptive-payments.php:132
+msgid ""
+"WooCommerce PayPal Adaptive Payments Gateway depends on the last version of "
+"%s to work!"
+msgstr ""
+"WooCommerce PayPalアダプティブ支払い決済が動作する%sの最新のバージョンに依存"
+"します！"
+
+#: woocommerce-gateway-paypal-adaptive-payments.php:132
+msgid "WooCommerce"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce PayPal Adaptive Payments"
+msgstr "WooCommerce PayPal アダプティブ支払"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woothemes.com/products/paypal-adaptive-payments/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "PayPal Adaptive Payments integration for WooCommerce"
+msgstr "WooCommerce向けPayPalアダプティブ支払"
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com"
+msgstr ""

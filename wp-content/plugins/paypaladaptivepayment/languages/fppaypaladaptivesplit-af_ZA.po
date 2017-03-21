@@ -1,0 +1,219 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: fppaypaladaptivesplit\n"
+"POT-Creation-Date: 2014-06-07 17:47+0530\n"
+"PO-Revision-Date: 2014-06-07 17:47+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: paypaladaptivepayment.php:49
+msgid "Enable/Disable"
+msgstr ""
+
+#: paypaladaptivepayment.php:51 paypaladaptivepayment.php:65
+msgid "PayPal Adaptive Split Payment"
+msgstr ""
+
+#: paypaladaptivepayment.php:55
+msgid "Payment Mode"
+msgstr ""
+
+#: paypaladaptivepayment.php:57
+msgid "PayPal Adaptive"
+msgstr ""
+
+#: paypaladaptivepayment.php:59
+msgid "Parallel"
+msgstr ""
+
+#: paypaladaptivepayment.php:59
+msgid "Chained"
+msgstr ""
+
+#: paypaladaptivepayment.php:62
+msgid "Title"
+msgstr ""
+
+#: paypaladaptivepayment.php:64
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: paypaladaptivepayment.php:69
+msgid "Description"
+msgstr ""
+
+#: paypaladaptivepayment.php:73
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: paypaladaptivepayment.php:76
+msgid "API Authentication"
+msgstr ""
+
+#: paypaladaptivepayment.php:81
+msgid "API User ID"
+msgstr ""
+
+#: paypaladaptivepayment.php:85
+msgid "Please enter your API User ID associated with your paypal account"
+msgstr ""
+
+#: paypaladaptivepayment.php:88
+msgid "API Password"
+msgstr ""
+
+#: paypaladaptivepayment.php:92
+msgid "Please enter your API Password associated with your paypal account"
+msgstr ""
+
+#: paypaladaptivepayment.php:95
+msgid "API Signature"
+msgstr ""
+
+#: paypaladaptivepayment.php:99
+msgid "Please enter your API Signature associated with your paypal account"
+msgstr ""
+
+#: paypaladaptivepayment.php:102
+msgid "Application ID"
+msgstr ""
+
+#: paypaladaptivepayment.php:106
+msgid "Please enter your Application ID created with your paypal account"
+msgstr ""
+
+#: paypaladaptivepayment.php:109
+msgid "Receiver Details"
+msgstr ""
+
+#: paypaladaptivepayment.php:114
+msgid "Enable Primary Receiver"
+msgstr ""
+
+#: paypaladaptivepayment.php:121
+msgid "Primary Receiver PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:125
+msgid "Please enter the Primary receiver paypal mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:128
+msgid "Primary Receiver Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:132
+msgid "Please enter the Primary receiver Payment Percentage "
+msgstr ""
+
+#: paypaladaptivepayment.php:135
+msgid "Enable Secondary Receiver 1"
+msgstr ""
+
+#: paypaladaptivepayment.php:141
+msgid "Secondary Receiver 1 PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:145 paypaladaptivepayment.php:165
+#: paypaladaptivepayment.php:185 paypaladaptivepayment.php:205
+#: paypaladaptivepayment.php:225
+msgid "Please enter the Secondary receiver's paypal mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:148
+msgid "Secondary Receiver 1 Payment Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:152
+msgid ""
+"Please enter the percentage of payment should be sent to secondary receiver"
+msgstr ""
+
+#: paypaladaptivepayment.php:155
+msgid "Enable Secondary Receiver 2"
+msgstr ""
+
+#: paypaladaptivepayment.php:161
+msgid "Secondary Receiver 2 PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:168
+msgid "Secondary Receiver 2 Payment Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:172 paypaladaptivepayment.php:192
+#: paypaladaptivepayment.php:212 paypaladaptivepayment.php:232
+msgid ""
+"Please enter how much percentage of payment should be sent to secondary "
+"receiver"
+msgstr ""
+
+#: paypaladaptivepayment.php:175
+msgid "Enable Secondary Receiver 3"
+msgstr ""
+
+#: paypaladaptivepayment.php:181
+msgid "Secondary Receiver 3 PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:188
+msgid "Secondary Receiver 3 Payment Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:195
+msgid "Enable Secondary Receiver 4"
+msgstr ""
+
+#: paypaladaptivepayment.php:201
+msgid "Secondary Receiver 4 PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:208
+msgid "Secondary Receiver 4 Payment Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:215
+msgid "Enable Secondary Receiver 5"
+msgstr ""
+
+#: paypaladaptivepayment.php:221
+msgid "Secondary Receiver 5 PayPal Mail"
+msgstr ""
+
+#: paypaladaptivepayment.php:228
+msgid "Secondary Receiver 5 Payment Percentage"
+msgstr ""
+
+#: paypaladaptivepayment.php:235
+msgid "Gateway Testing"
+msgstr ""
+
+#: paypaladaptivepayment.php:240
+msgid "PayPal Adaptive sandbox"
+msgstr ""
+
+#: paypaladaptivepayment.php:242
+msgid "Enable PayPal Adaptive sandbox"
+msgstr ""
+
+#: paypaladaptivepayment.php:244
+#, php-format
+msgid ""
+"PayPal Adaptive sandbox can be used to test payments. Sign up for a "
+"developer account <a href=\"%s\">here</a>."
+msgstr ""
+
+#: paypaladaptivepayment.php:360
+msgid "Payment error:"
+msgstr ""
+
+#: paypaladaptivepayment.php:377
+msgid "Payment error: Please Report to admin about this problem"
+msgstr ""

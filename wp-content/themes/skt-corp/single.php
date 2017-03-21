@@ -4,13 +4,93 @@
  *
  * @package SKT Corp
  */
-
 get_header();
 
 ?>
 <?php if (in_category('hostlist') || in_category('testimonial') || in_category('tourlist')): ?>
 <?php while (have_posts()) :
 the_post(); ?>
+
+<?php if (isset($_POST) && $_POST['order_fee'] > 0 && !empty(get_post_meta($post->ID, 'paypal_account', TRUE))): ?>
+    <?php
+    //insert to paypal
+    //var_dump('nhan');die;
+    $paypal_account = get_post_meta($post->ID, 'paypal_account', TRUE);
+    $content = '';
+    $dataPost = array();
+    $dataPost['type'] = $_POST['order_type'];
+    $dataPost['title'] = $_POST['post_name'];
+    $dataPost['full_name'] = $_POST['order_name'];
+    $dataPost['mobile_phone'] = $_POST['order_mobile'];
+    $dataPost['stay_address'] = $_POST['order_address'];
+    $dataPost['passport'] = $_POST['order_passport'];
+    $dataPost['start_day'] = $_POST['order_starday'];
+    $dataPost['end_day'] = $_POST['order_endday'];
+    $dataPost['start_time'] = $_POST['order_starttime'];
+    $dataPost['end_time'] = $_POST['order_endtime'];
+    $dataPost['total_hour'] = $_POST['order_hour'];
+    $dataPost['total_fee'] = $_POST['order_fee'];
+    $dataPost['place'] = $_POST['order_place'];
+    $dataPost['remark'] = $_POST['order_remark'];
+    // var_dump($wpdb);die;
+    // $wpdb->insert('paypal', $dataPost);
+    //create product
+    foreach ($dataPost as $key => $value) {
+        $content .= '<p><strong>' . $key . ':</strong> ' . $value . '</p>';
+    }
+    $productData = array(
+        'post_author' => 1,
+        'post_date' => date('Y-m-d H:i:s'),
+        'post_date_gmt' => date('Y-m-d H:i:s'),
+        'post_content' => $content,
+        'post_title' => $_POST['order_name'],
+        'post_status' => 'publish',
+        'post_modified' => date('Y-m-d H:i:s'),
+        'post_modified_gmt' => date('Y-m-d H:i:s'),
+        'post_type' => 'product',
+    );
+    $posts = wp_insert_post($productData, $wp_error = false);
+    //$wpdb->insert('posts', $productData);
+    $lastInsertId = $posts;
+   // wp_update_post(array('ID' => $lastInsertId, 'guid' => esc_url(home_url('/')) . '?post_type=product&#038;p=' . $lastInsertId));
+    //$wpdb->update( 'posts', array('guid' => esc_url(home_url('/')).'?post_type=product&#038;p='.$lastInsertId), array('ID' => $lastInsertId ));
+
+    //get option
+    $option = get_option('woocommerce_fp_paypal_adaptive_settings');
+    //  var_dump($option);die;
+    //create product meta
+    $meta = array(
+        '_edit_last' => 1,
+        '_edit_last' => time() . ':1',
+        '_visibility' => 'visible',
+        '_stock_status' => 'instock',
+        '_fppap_primary_rec_mail_id' => $option['pri_r_paypal_mail'],
+        '_fppap_primary_rec_percent' => 30,
+        '_fppap_sec_1_rec_mail_id' => $paypal_account,
+        '_fppap_sec_1_rec_percent' => 70,
+        '_fppap_sec_1_enable' => 'yes',
+        '_enable_fp_paypal_adaptive' => 'enable_indiv',
+        'total_sales' => 0,
+        '_downloadable' => 'no',
+        '_virtual' => 'yes',
+        '_regular_price' => $_POST['order_fee'],
+        '_price' => $_POST['order_fee'],
+        '_manage_stock' => 'no',
+        '_product_version' => '2.6.14',
+    );
+    foreach ($meta as $kmeta => $vmeta) {
+        add_post_meta($lastInsertId, $kmeta, $vmeta);
+    }
+    //add product to cart
+    global $woocommerce;
+    $woocommerce->cart->add_to_cart($lastInsertId);
+    add_filter('add_to_cart_redirect', 'redirect_to_checkout');
+    $checkout_url = $woocommerce->cart->get_checkout_url();;
+    //redirect to checkout
+    wp_redirect($checkout_url, 302);
+    ?>
+
+<?php endif; ?>
 <div class="header1" style="height:300px;background:url(../img/banner_host_dt.png);background-size: cover;">
     <div class="title-top">
         <h2>ゲストの利用方法
@@ -185,8 +265,11 @@ the_post(); ?>
                             <h2>あなたの情報を入力してから支払いをしてください</h2>
                         </div>
                         <form method="post" id="paypalAdaptive">
-                            <input type="hidden" value="<?php print get_the_title($post->ID) ?>" class="post_name"/>
-                            <input type="hidden" value="<?php echo get_post_meta($post->ID, 'price', TRUE); ?>" class="post_price"/>
+                            <input type="hidden" name="post_name" value="<?php print get_the_title($post->ID) ?>" class="post_name"/>
+                            <input type="hidden" name="post_price" value="<?php echo get_post_meta($post->ID, 'price', TRUE); ?>"
+                                   class="post_price"/>
+                            <input type="hidden" name="order_type" value="<?php if(in_category('tourlist')){ print 'tour';}elseif(in_category('hostlist')){print 'host';} ?>" class="post_type"/>
+                            <input type="hidden" name="paypal_account" value="<?php echo get_post_meta($post->ID, 'paypal_account', TRUE); ?>" class="post_name"/>
                             <div class="form-item">
                                 <label class="require">フルネーム <span>*</span></label>
                                 <input type="text" name="order_name" required/>
@@ -205,11 +288,13 @@ the_post(); ?>
                             </div>
                             <div class="form-item">
                                 <label class="require">開始日 <span>*</span></label>
-                                <input type="text" value="<?php print date('m/d/Y') ?>" name="order_starday" id="datepicker" required/>
+                                <input type="text" value="<?php print date('m/d/Y') ?>" name="order_starday"
+                                       id="datepicker" required/>
                             </div>
                             <div class="form-item">
                                 <label class="require">終わりの日 <span>*</span></label>
-                                <input type="text" value="<?php print date('m/d/Y') ?>" name="order_endday" id="datepicker2" required/>
+                                <input type="text" value="<?php print date('m/d/Y') ?>" name="order_endday"
+                                       id="datepicker2" required/>
                             </div>
                             <div class="form-item">
                                 <label class="require">始まる時間<span>*</span></label>
@@ -225,7 +310,7 @@ the_post(); ?>
                             </div>
                             <div class="form-item">
                                 <label class="require">総手数料 <span>*</span></label>
-                                <input type="text" value="0" disabled class="fee_price" name="order_fee" required/>
+                                <input type="text" value="0" class="fee_price" name="order_fee" required/>
                             </div>
                             <div class="form-item">
                                 <label class="require">待ち合わせ場所<span>*</span></label>
@@ -233,7 +318,7 @@ the_post(); ?>
                             </div>
                             <div class="form-item">
                                 <label class="require">リマーク</label>
-                                <input type="text" name="order_remark"/>
+                                <textarea name="order_remark"></textarea>
                             </div>
                             <div class="form-item-submit">
                                 <input type="submit" name="submit" value="Pay with Paypal"/>

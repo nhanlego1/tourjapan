@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_MEMORY_LIMIT', '128MB');
+define('WP_MEMORY_LIMIT', '256MB');
 define('DB_NAME', 'tourjapan');
 
 /** MySQL database username */
@@ -78,7 +78,7 @@ $table_prefix  = 'tour_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

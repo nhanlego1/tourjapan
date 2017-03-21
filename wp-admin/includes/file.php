@@ -77,9 +77,10 @@ $wp_file_descriptions = array(
 function get_file_description( $file ) {
 	global $wp_file_descriptions, $allowed_files;
 
-	$relative_pathinfo = pathinfo( $file );
+	$dirname = pathinfo( $file, PATHINFO_DIRNAME );
+
 	$file_path = $allowed_files[ $file ];
-	if ( isset( $wp_file_descriptions[ basename( $file ) ] ) && '.' === $relative_pathinfo['dirname'] ) {
+	if ( isset( $wp_file_descriptions[ basename( $file ) ] ) && '.' === $dirname ) {
 		return $wp_file_descriptions[ basename( $file ) ];
 	} elseif ( file_exists( $file_path ) && is_file( $file_path ) ) {
 		$template_data = implode( '', file( $file_path ) );
@@ -963,7 +964,7 @@ function WP_Filesystem( $args = false, $context = false, $allow_relaxed_file_own
  * @return string The transport to use, see description for valid return values.
  */
 function get_filesystem_method( $args = array(), $context = '', $allow_relaxed_file_ownership = false ) {
-	$method = defined('FS_METHOD') ? FS_METHOD : direct; // Please ensure that this is either 'direct', 'ssh2', 'ftpext' or 'ftpsockets'
+	$method = defined('FS_METHOD') ? FS_METHOD : false; // Please ensure that this is either 'direct', 'ssh2', 'ftpext' or 'ftpsockets'
 
 	if ( ! $context ) {
 		$context = WP_CONTENT_DIR;
@@ -1260,7 +1261,7 @@ foreach ( (array) $extra_fields as $field ) {
 ?>
 	<p class="request-filesystem-credentials-action-buttons">
 		<button class="button cancel-button" data-js-action="close" type="button"><?php _e( 'Cancel' ); ?></button>
-		<?php submit_button( __( 'Proceed' ), 'button', 'upgrade', false ); ?>
+		<?php submit_button( __( 'Proceed' ), '', 'upgrade', false ); ?>
 	</p>
 </div>
 </form>

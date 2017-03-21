@@ -1,0 +1,276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WCMp Paypal Adaptive Gateway\n"
+"POT-Creation-Date: 2017-03-21 10:42+0530\n"
+"PO-Revision-Date: 2017-03-21 10:42+0530\n"
+"Last-Translator: Dualcube <admin@dualcube.com>\n"
+"Language-Team: WC Marketplace <admin@dualcube.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-"
+"adaptive-gateway\n"
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-admin.php:19
+msgid "Paypal Adaptive"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-admin.php:43
+msgid "Powered by"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-admin.php:43
+msgid "Dualcube"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:13
+msgid "Allows payments by Paypal Adaptive."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:36
+msgid "Enable/Disable"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:38
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:73
+msgid "PayPal Adaptive Split Payment"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:42
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:44
+msgid "Store Mode"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:46
+msgid "Multi Vendor"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:46
+msgid "Single Vendor"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:49
+msgid "Payment Mode"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:51
+msgid "PayPal Adaptive"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:53
+msgid "Parallel"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:53
+msgid "Chained"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:56
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:58
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:63
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:65
+msgid "Payment Fees by"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:60
+msgid "Sender"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:60
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:67
+msgid "Each Receiver"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:67
+msgid "Primary Receiver"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:70
+msgid "Title"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:72
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:77
+msgid "Description"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:79
+msgid ""
+"Pay with PayPal Adaptive Split Payment. You can pay with your credit card if "
+"you don't have a PayPal account"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:81
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:84
+msgid "Store Owner"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:89
+msgid "Store Owner Paypal Email"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:93
+msgid "Please enter your paypal email Id"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:96
+msgid "API Authentication"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:101
+msgid "API User ID"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:105
+msgid "Please enter your API User ID associated with your paypal account"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:108
+msgid "API Password"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:112
+msgid "Please enter your API Password associated with your paypal account"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:115
+msgid "API Signature"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:119
+msgid "Please enter your API Signature associated with your paypal account"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:122
+msgid "Application ID"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:126
+msgid ""
+"Please enter your Application ID created with your paypal account for "
+"sandbox you can use APP-80W284485P519543T as test Application Id"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:129
+msgid "SandBox Testing"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:134
+msgid "PayPal Adaptive sandbox"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:136
+msgid "Enable PayPal Adaptive sandbox"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:138
+#, php-format
+msgid ""
+"PayPal Adaptive sandbox can be used to test payments. Sign up for a "
+"developer account <a href=\"%s\">here</a>."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:383
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway-adaptive.php:394
+msgid "Primary paypel email or percentage is not configured Yet!"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/classes/class-WCMp-Paypal-Adaptive-Gateway.php:52
+msgid "IPN payment completed"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/includes/WCMp-Paypal-Adaptive-Gateway-core-functions.php:23
+#, php-format
+msgid ""
+"%sWCMp Paypal Adaptive Gateway is inactive.%s The %sWooCommerce plugin%s "
+"must be active for the WCMp Paypal Adaptive Gateway to work. Please "
+"%sinstall & activate WooCommerce%s"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:33
+msgid "Configure your Adaptive Payment Settings"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:35
+msgid "Primary Receiver Name"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:35
+msgid "Enter the Primary Receiver Name."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:36
+msgid "Primary Receiver paypal Email"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:36
+msgid "Enter the Primary Receiver paypal email Id."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:37
+msgid "Primary Receiver Percentage"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:37
+msgid "Enter the Primary Receiver Percentage Only numeric."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:38
+msgid "Primary Receiver Details"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:38
+msgid "Enter the Primary Receiver details."
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:39
+msgid "Other Receivers Details"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:40
+msgid "Receiver Name"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:41
+msgid "Receiver Paypel Email"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:42
+msgid "Receiver Percentage"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:43
+msgid "Receiver Details"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:69
+msgid "Please Enter the Primary Receiver name <br/>"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:77
+msgid "Please Enter the Primary Receiver email <br/>"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:85
+msgid "Please Enter the Primary Receiver Percentage <br/>"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:104
+msgid "Patpal Adaptive settings updated"
+msgstr ""
+
+#: /var/www/html/wcmp/wp-content/plugins/wcmp-paypal-adaptive-gateway/admin/class-WCMp-Paypal-Adaptive-Gateway-settings-payment-paypal_adaptive.php:116
+msgid ""
+"Receiver settings only applicable for Single Vendor. and sum all receivers "
+"percentage must be = 100"
+msgstr ""

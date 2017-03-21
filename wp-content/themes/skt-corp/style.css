@@ -2256,7 +2256,7 @@ span.comming-soon{
 #paypalAdaptive .form-item{
     margin-bottom: 10px;
 }
-#paypalAdaptive .form-item input{
+#paypalAdaptive .form-item input, #paypalAdaptive .form-item textarea{
     width: 60%;
 }
 #paypalAdaptive .form-item label{
@@ -2275,3 +2275,10 @@ span.comming-soon{
     margin-top: 30px;
 }
 .fee_hour{height: 26px}
+.rw-rating-table{display:none}
+input[type="email"], input[type="tel"]{
+    height: 26px;
+}
+.create-account.woocommerce-validated{
+    display: none;
+}

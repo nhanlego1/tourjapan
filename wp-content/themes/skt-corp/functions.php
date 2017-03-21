@@ -9,6 +9,12 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 
+add_action( 'init', 'setting_my_first_cookie' );
+
+function setting_my_first_cookie() {
+    setcookie( 'tour', '123', 30 * 6000, COOKIEPATH, COOKIE_DOMAIN );
+}
+
 if (!function_exists('skt_corp_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
