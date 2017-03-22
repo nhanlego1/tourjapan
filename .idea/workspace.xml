@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/abc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
     </list>
     <ignored path="tourjapan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,20 +57,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="66" />
+            <state relative-caret-position="180">
+              <caret line="21" column="125" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="125" />
               <folding>
-                <element signature="e#386#496#0#HTML" expanded="true" />
-                <element signature="e#698#754#0#HTML" expanded="true" />
+                <marker date="1490152940000" expanded="true" signature="664:780" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="824:872" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="873:893" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="944:972" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="1006:1147" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="1396:1671" ph="..." />
+                <marker date="1490152940000" expanded="true" signature="1402:1664" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-host_entry.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-host_entry.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/abc.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
       </list>
     </option>
   </component>
@@ -330,12 +330,12 @@
       <updated>1487949456620</updated>
       <workItem from="1487949458023" duration="2133000" />
       <workItem from="1489849821992" duration="22424000" />
-      <workItem from="1490149536752" duration="2019000" />
+      <workItem from="1490149536752" duration="2653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26576000" />
+    <option name="totallyTimeSpent" value="27210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -758,22 +758,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="66" />
-          <folding>
-            <element signature="e#386#496#0#HTML" expanded="true" />
-            <element signature="e#698#754#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="395" column="38" selection-start-line="395" selection-start-column="38" selection-end-line="395" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="125" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="125" />
+          <folding>
+            <marker date="1490152940000" expanded="true" signature="664:780" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="824:872" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="873:893" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="944:972" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="1006:1147" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="1396:1671" ph="..." />
+            <marker date="1490152940000" expanded="true" signature="1402:1664" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
