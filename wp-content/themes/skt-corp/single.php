@@ -274,7 +274,7 @@ the_post(); ?>
                             <input type="hidden" name="order_type" value="<?php if(in_category('tourlist')){ print 'tour';}elseif(in_category('hostlist')){print 'host';} ?>" class="post_type"/>
                             <input type="hidden" name="paypal_account" value="<?php echo get_post_meta($post->ID, 'paypal_account', TRUE); ?>" class="post_name"/>
                             <div class="form-item">
-                                <label class="require">フルネーム <span>*</span></label>
+                                <label class="require">名前 <span>*</span></label>
                                 <input type="text" name="order_name" required/>
                             </div>
                             <div class="form-item">
@@ -290,17 +290,17 @@ the_post(); ?>
                                 <input type="text" name="order_passport" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">開始日 <span>*</span></label>
+                                <label class="require">開始年月日 <span>*</span></label>
                                 <input type="text" value="<?php print date('m/d/Y') ?>" name="order_starday"
                                        id="datepicker" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">終わりの日 <span>*</span></label>
+                                <label class="require">終了年月日 <span>*</span></label>
                                 <input type="text" value="<?php print date('m/d/Y') ?>" name="order_endday"
                                        id="datepicker2" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">始まる時間<span>*</span></label>
+                                <label class="require">開始時間<span>*</span></label>
                                 <input type="text" value="<?php print date('H:i') ?>" name="order_starttime" required/>
                             </div>
                             <div class="form-item">
@@ -308,19 +308,19 @@ the_post(); ?>
                                 <input type="text" value="<?php print date('H:i') ?>" name="order_endtime" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">総時間 <span>*</span></label>
+                                <label class="require">合計時間 <span>*</span></label>
                                 <input type="number" class="fee_hour" name="order_hour" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">総手数料 <span>*</span></label>
+                                <label class="require">合計金額 <span>*</span></label>
                                 <input type="text" value="0" class="fee_price" name="order_fee" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">待ち合わせ場所<span>*</span></label>
+                                <label class="require">待ち合わせ場所*<span>*</span></label>
                                 <input type="text" name="order_place" required/>
                             </div>
                             <div class="form-item">
-                                <label class="require">リマーク</label>
+                                <label class="require">備考</label>
                                 <textarea name="order_remark"></textarea>
                             </div>
                             <div class="form-item-submit">

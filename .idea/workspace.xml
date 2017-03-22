@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
     </list>
     <ignored path="tourjapan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,24 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="322" column="57" selection-start-line="322" selection-start-column="57" selection-end-line="322" selection-end-column="57" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -100,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -135,12 +125,12 @@
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/abc.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
       </list>
     </option>
   </component>
@@ -327,12 +317,12 @@
       <workItem from="1489849821992" duration="22424000" />
       <workItem from="1490149536752" duration="3153000" />
       <workItem from="1490191284565" duration="9000" />
-      <workItem from="1490191346276" duration="480000" />
+      <workItem from="1490191346276" duration="736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28199000" />
+    <option name="totallyTimeSpent" value="28455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -699,24 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/abc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -759,6 +731,24 @@
         <state relative-caret-position="510">
           <caret line="2290" column="1" selection-start-line="2290" selection-start-column="1" selection-end-line="2290" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="322" column="57" selection-start-line="322" selection-start-column="57" selection-end-line="322" selection-end-column="57" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
