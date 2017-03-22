@@ -17,9 +17,9 @@
               if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes'){
               	$step = 3;
               }
-              if (isset($_GET['amount']) and $_GET['amount']!=''){
-              	$step = 4;
-              }
+//              if (isset($_GET['amount']) and $_GET['amount']!=''){
+//              	$step = 4;
+//              }
               
               ?>
                 <?php $args = array(
@@ -46,10 +46,10 @@
                     <span class="bubble"><span class="num-step">3</span></span>
                     <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step3', TRUE); ?></span> 
                 </li>
-                <li class="<?php if($step>=4):?>completed<?php endif;?>">
-                    <span class="bubble bubble-last"><span class="num-step num-step-last">4</span></span>
-                    <span class="title-step"><?php echo get_post_meta(get_the_ID(), 'step4', TRUE); ?></span> 
-                </li>
+<!--                <li class="--><?php //if($step>=4):?><!--completed--><?php //endif;?><!--">-->
+<!--                    <span class="bubble bubble-last"><span class="num-step num-step-last">4</span></span>-->
+<!--                    <span class="title-step">--><?php //echo get_post_meta(get_the_ID(), 'step4', TRUE); ?><!--</span> -->
+<!--                </li>-->
        <?php endwhile;?>         
             </ul>
             
@@ -393,7 +393,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                      <?php echo $_POST['t3di'] ;?></td>
                 </tr>
                 <tr>
-                    <th>ニックネーム<em class="required">※</em></th>
+                    <th>Paypal Account<em class="required">※</em></th>
                     <td>
                         <?php echo $_POST['t4kl']; ?> </td>
                 </tr>
@@ -529,7 +529,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                                   </td>
                                 </tr>
                                 <tr>
-                                  <th>ニックネーム<em class="required">※</em></th>
+                                  <th>Paypal Account<em class="required">※</em></th>
                                   <td>
                                     <input type="text" id="t4kl" name="t4kl" size="60" value="" maxlength="300" required>
                                   </td>

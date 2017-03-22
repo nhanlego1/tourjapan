@@ -87,8 +87,11 @@ the_post(); ?>
     add_filter('add_to_cart_redirect', 'redirect_to_checkout');
     $checkout_url = $woocommerce->cart->get_checkout_url();;
     //redirect to checkout
-    wp_redirect($checkout_url, 302);
+    //wp_redirect($checkout_url, 302);
     ?>
+    <script type="text/javascript">
+        setTimeout(function(){ window.location.replace('/checkout'); }, 1000);
+    </script>
 
 <?php endif; ?>
 <div class="header1" style="height:300px;background:url(../img/banner_host_dt.png);background-size: cover;">
