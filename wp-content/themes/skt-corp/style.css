@@ -2282,3 +2282,12 @@ input[type="email"], input[type="tel"]{
 .create-account.woocommerce-validated{
     display: none;
 }
+.content-start div.rw-ui-container.rw-urid-4730.rw-ui-star.rw-size-medium.rw-dir-ltr.rw-halign-right.rw-valign-middle.rw-style-flat_yellow.rw-theme-star_flat_yellow.rw-active.rw-class-blog-post{
+    display:block;
+}
+.newTour .newTour .right.carousel-control{
+    right:-70px;
+}
+.newTour .newTour .left.carousel-control{
+    left:-70px;
+}

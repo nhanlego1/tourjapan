@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbed3c3-fa2b-46f6-829c-c8eb313e8b46" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
     </list>
     <ignored path="tourjapan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +27,7 @@
       <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="1335">
               <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="false" />
@@ -38,7 +39,7 @@
       <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="945">
               <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
               <folding />
             </state>
@@ -57,19 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="21" column="125" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="125" />
               <folding>
-                <marker date="1490152940000" expanded="true" signature="664:780" ph="..." />
-                <marker date="1490152940000" expanded="true" signature="824:872" ph="..." />
                 <marker date="1490152940000" expanded="true" signature="873:893" ph="..." />
                 <marker date="1490152940000" expanded="true" signature="944:972" ph="..." />
-                <marker date="1490152940000" expanded="true" signature="1006:1147" ph="..." />
-                <marker date="1490152940000" expanded="true" signature="1396:1671" ph="..." />
-                <marker date="1490152940000" expanded="true" signature="1402:1664" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,7 +74,7 @@
       <file leaf-file-name="page-host_entry.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="5835">
               <caret line="395" column="38" selection-start-line="395" selection-start-column="38" selection-end-line="395" selection-end-column="38" />
               <folding />
             </state>
@@ -98,18 +94,18 @@
       <file leaf-file-name="page-tour_entry.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="2955">
               <caret line="197" column="40" selection-start-line="197" selection-start-column="40" selection-end-line="197" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33870">
-              <caret line="2258" column="0" selection-start-line="2258" selection-start-column="0" selection-end-line="2260" selection-end-column="1" />
+            <state relative-caret-position="465">
+              <caret line="2287" column="0" selection-start-line="2287" selection-start-column="0" selection-end-line="2292" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -139,13 +135,13 @@
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/js/custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/abc.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
       </list>
     </option>
   </component>
@@ -186,8 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -262,6 +256,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,18 +326,20 @@
       <updated>1487949456620</updated>
       <workItem from="1487949458023" duration="2133000" />
       <workItem from="1489849821992" duration="22424000" />
-      <workItem from="1490149536752" duration="2653000" />
+      <workItem from="1490149536752" duration="3153000" />
+      <workItem from="1490191284565" duration="9000" />
+      <workItem from="1490191346276" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27210000" />
+    <option name="totallyTimeSpent" value="27881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28756058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29725364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -575,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3209">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-720">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2220">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-675">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6510">
           <caret line="441" column="76" selection-start-line="441" selection-start-column="75" selection-end-line="441" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1529">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-210">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,23 +694,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="2955">
           <caret line="197" column="40" selection-start-line="197" selection-start-column="40" selection-end-line="197" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33870">
-          <caret line="2258" column="0" selection-start-line="2258" selection-start-column="0" selection-end-line="2260" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="1335">
           <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="false" />
@@ -734,7 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="945">
           <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
           <folding />
         </state>
@@ -760,7 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="5835">
           <caret line="395" column="38" selection-start-line="395" selection-start-column="38" selection-end-line="395" selection-end-column="38" />
           <folding />
         </state>
@@ -771,14 +749,17 @@
         <state relative-caret-position="180">
           <caret line="21" column="125" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="125" />
           <folding>
-            <marker date="1490152940000" expanded="true" signature="664:780" ph="..." />
-            <marker date="1490152940000" expanded="true" signature="824:872" ph="..." />
             <marker date="1490152940000" expanded="true" signature="873:893" ph="..." />
             <marker date="1490152940000" expanded="true" signature="944:972" ph="..." />
-            <marker date="1490152940000" expanded="true" signature="1006:1147" ph="..." />
-            <marker date="1490152940000" expanded="true" signature="1396:1671" ph="..." />
-            <marker date="1490152940000" expanded="true" signature="1402:1664" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="2287" column="0" selection-start-line="2287" selection-start-column="0" selection-end-line="2292" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
