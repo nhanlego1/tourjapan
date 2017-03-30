@@ -4,7 +4,8 @@
  *
  * @package SKT Corp
  */
-
+define('HOST_TERM_ID', 30);
+define('TOUR_TERM_ID', 29);
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -949,6 +950,7 @@ function SearchTour()
 
 function SearchHost()
 {
+    global $post;
     $count = 0;
     $f1 = $_GET['tour'];
     $f2 = $_GET['theme-category'];
@@ -1094,11 +1096,23 @@ function SearchHost()
         $wp_query->the_post();
         $count++; ?>
         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img class="host-img"
-                                                                                            src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
+            <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
+                        class="host-img"
+                        src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
             </div>
+            <p class="host-name"><?php //print_r(_get_post_meta($post->ID, 'host_tour_name')); ?><?php get_post_meta($post->ID, 'host_tour_name', TRUE) ?></p>
+            <p class="host-salary">＄<?php echo get_post_meta($post->ID, 'price', TRUE) ?>
+                /Per
+                One Hour</p>
+            <div class="host-desc">
+                <p>エリア : <?php echo get_post_meta($post->ID, 'guide_area', TRUE) ?></p>
+                <p>
+                    通訳言語：<?php echo get_post_meta($post->ID, 'host_tour_language', TRUE) ?></p>
+                <p>
+                    移動手段：<?php echo get_post_meta($post->ID, 'transportration', TRUE) ?></p>
+                <p><?php echo get_post_meta($post->ID, 'early_time', TRUE) ?></p>
 
-            <?php the_content(); ?>
+            </div>
         </div>
 
 

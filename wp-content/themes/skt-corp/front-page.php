@@ -290,6 +290,8 @@ get_header();
         <div class="container list-host">
             <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
+
+
                     <?php
                     $count = 0;
                     $args = array(
@@ -302,46 +304,68 @@ get_header();
 
                     $wp_query = new WP_Query();
                     $wp_query->query($args);
+                    $class = '';
                     while ($wp_query->have_posts()) {
                         $wp_query->the_post();
-                        $count++; ?>
-                        <?php if ($count == 1): ?>
+                        ?>
+                        <?php if ($count == 0): ?>
                             <div class="item active">
                             <div class="row">
                         <?php endif ?>
-                        <?php if ($count >= 1 && $count < 5): ?>
+                        <?php if ($count >= 0 && $count < 4): ?>
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
                                             class="host-img"
                                             src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
+                                <p class="host-name"><?php echo get_post_meta($post->ID, 'host_tour_name', TRUE) ?></p>
+                                <p class="host-salary">＄<?php echo get_post_meta($post->ID, 'price', TRUE) ?>
+                                    /Per
+                                    One Hour</p>
+                                <div class="host-desc">
+                                    <p>エリア : <?php echo get_post_meta($post->ID, 'guide_area', TRUE) ?></p>
+                                    <p>
+                                        通訳言語：<?php echo get_post_meta($post->ID, 'host_tour_language', TRUE) ?></p>
+                                    <p>
+                                        移動手段：<?php echo get_post_meta($post->ID, 'transportration', TRUE) ?></p>
+                                    <p><?php echo get_post_meta($post->ID, 'early_time', TRUE) ?></p>
 
-                                <?php the_content(); ?>
+                                </div>
                             </div>
-                        <?php endif ?>
-                        <?php if ($count == 5): ?>
+                        <?php endif; ?>
+                        <?php if ($count == 4): ?>
                             </div>
                             </div>
                             <div class="item">
                             <div class="row">
                         <?php endif ?>
-                        <?php if ($count >= 5 && $count <= 8): ?>
+                        <?php if ($count >= 4 && $count <= 8): ?>
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
                                             class="host-img"
                                             src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
+                                <p class="host-name"><?php echo get_post_meta($post->ID, 'host_tour_name', TRUE) ?></p>
+                                <p class="host-salary">＄<?php echo get_post_meta($post->ID, 'price', TRUE) ?>
+                                    /Per
+                                    One Hour</p>
+                                <div class="host-desc">
+                                    <p>エリア : <?php echo get_post_meta($post->ID, 'guide_area', TRUE) ?></p>
+                                    <p>
+                                        通訳言語：<?php echo get_post_meta($post->ID, 'host_tour_language', TRUE) ?></p>
+                                    <p>
+                                        移動手段：<?php echo get_post_meta($post->ID, 'transportration', TRUE) ?></p>
+                                    <p><?php echo get_post_meta($post->ID, 'early_time', TRUE) ?></p>
 
-                                <?php the_content(); ?>
+                                </div>
                             </div>
-                        <?php endif ?>
+                        <?php endif; ?>
                         <?php if ($count == 8): ?>
                             </div>
                             </div>
                         <?php endif ?>
-
-
-                    <?php } ?>
+                        <?php $count++;
+                    } ?>
                 </div>
             </div>
             <a class="left carousel-control" href="#carousel-example-generic1" data-slide="prev"><span class="sr-only">Previous</span><img
